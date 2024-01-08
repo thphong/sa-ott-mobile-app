@@ -53,16 +53,16 @@ class CategoryTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             lblTitle.topAnchor.constraint(equalTo: topContentView.topAnchor),
-            lblTitle.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor),
+            lblTitle.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 16),
             lblTitle.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor),
             
             btnMore.topAnchor.constraint(equalTo: topContentView.topAnchor),
-            btnMore.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor),
+            btnMore.trailingAnchor.constraint(equalTo: topContentView.trailingAnchor, constant: -16),
             btnMore.bottomAnchor.constraint(equalTo: topContentView.bottomAnchor),
             
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
             
         ])

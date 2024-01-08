@@ -23,6 +23,7 @@ final class SubcateTableViewCell: CategoryTableViewCell {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 16
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.delegate = self
@@ -36,10 +37,10 @@ final class SubcateTableViewCell: CategoryTableViewCell {
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: subContentView.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: subContentView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: subContentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 32)
+            collectionView.bottomAnchor.constraint(equalTo: subContentView.bottomAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 36)
         ])
     }
 }

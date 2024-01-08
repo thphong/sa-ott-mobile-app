@@ -28,9 +28,10 @@ final class SubcateCollectionViewCell: UICollectionViewCell {
         subView.translatesAutoresizingMaskIntoConstraints = false
         
         imgView = UIImageView()
-        imgView.image = UIImage(systemName: "person.circle")
-        imgView.tintColor = .yellow
-        imgView.layer.cornerRadius = 50
+        imgView.image = UIImage(named: "testing")
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.cornerRadius = 10
+        imgView.clipsToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
         
         lblTitle = UILabel()

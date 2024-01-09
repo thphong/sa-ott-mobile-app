@@ -18,6 +18,17 @@ private var homeViewController: HomeViewController = {
     return viewController
 }()
 
+private var profileViewController: ProfileViewController = {
+    let tabBarItem = UITabBarItem()
+    tabBarItem.title = "Profile"
+    tabBarItem.image = UIImage(systemName: "person")
+    tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+    
+    let viewController = ProfileViewController()
+    viewController.tabBarItem = tabBarItem
+    return viewController
+}()
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -34,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Tabbar controller
         let tabbarController = UITabBarController()
         tabbarController.delegate = self
-        tabbarController.viewControllers = [homeViewController]
+        tabbarController.viewControllers = [homeViewController, profileViewController]
         tabbarController.tabBar.tintColor = UIColor(hexString: "#04555C")
 
         window.rootViewController = tabbarController

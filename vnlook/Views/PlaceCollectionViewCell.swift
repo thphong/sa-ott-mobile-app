@@ -32,7 +32,6 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
         imgView.translatesAutoresizingMaskIntoConstraints = false
         
         lblTitle = UILabel()
-        lblTitle.text = "Dragon Bridge"
         lblTitle.font = .interBold(14)
         lblTitle.textColor = .yellow
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +42,6 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
         locView.translatesAutoresizingMaskIntoConstraints = false
         
         lblLocation = UILabel()
-        lblLocation.text = "Da Nang"
         lblLocation.font = .interMedium(12)
         lblLocation.textColor = .yellow
         lblLocation.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +52,6 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
         ratingView.translatesAutoresizingMaskIntoConstraints = false
         
         lblRating = UILabel()
-        lblRating.text = "4.5"
         lblRating.font = .interMedium(12)
         lblRating.textColor = .yellow
         lblRating.translatesAutoresizingMaskIntoConstraints = false
@@ -87,5 +84,11 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
             subStackView2.trailingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: -8),
             subStackView2.bottomAnchor.constraint(equalTo: imgView.bottomAnchor, constant: -8)
         ])
+    }
+    
+    func setData(_ data: PlaceModel) {
+        lblTitle.text = data.name
+        lblLocation.text = data.location
+        lblRating.text = String(data.rating)
     }
 }

@@ -1,26 +1,22 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  vnlook
 //
-//  Created by Nguyễn Minh Tâm on 08/01/2024.
+//  Created by Nguyễn Minh Tâm on 10/01/2024.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
     private var topContentView: UIView!
     private var subContentView: UIView!
     private var searchBar: UISearchBar!
     private var tableView: UITableView!
+    private var lblTitle: UILabel!
+    private var mockData = PlaceModel()
     
     override func loadView() {
         super.loadView()
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: #selector(menuAction))
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: #selector(menuAction)),
-            UIBarButtonItem(image: UIImage(systemName: "bell"), style: .plain, target: nil, action: #selector(menuAction))
-        ]
         
         topContentView = UIView()
         topContentView.backgroundColor = UIColor(hexString: "#04555C")
@@ -39,17 +35,26 @@ class HomeViewController: UIViewController {
         searchBar.placeholder = "Search"
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         
+        lblTitle = UILabel()
+        lblTitle.text = "Explore the beautiful places"
+        lblTitle.textColor = .white
+        lblTitle.font = .interBold(24)
+        lblTitle.numberOfLines = 2
+        lblTitle.translatesAutoresizingMaskIntoConstraints = false
+        
         tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        tableView.isScrollEnabled = false
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(SubcateTableViewCell.self, forCellReuseIdentifier: String(describing: SubcateTableViewCell.self))
         tableView.register(PlaceTableViewCell.self, forCellReuseIdentifier: String(describing: PlaceTableViewCell.self))
         tableView.register(RecommendTableViewCell.self, forCellReuseIdentifier: String(describing: RecommendTableViewCell.self))
         
+        topContentView.addSubview(lblTitle)
         subContentView.addSubview(tableView)
         view.addSubview(topContentView)
         view.addSubview(subContentView)
@@ -71,22 +76,22 @@ class HomeViewController: UIViewController {
             searchBar.heightAnchor.constraint(equalToConstant: 40),
             searchBar.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 2 / 3),
             
-            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 16),
+            lblTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            lblTitle.leadingAnchor.constraint(equalTo: topContentView.leadingAnchor, constant: 16),
+            lblTitle.widthAnchor.constraint(equalTo: topContentView.widthAnchor, multiplier: 1 / 2),
+            
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 8),
             tableView.leadingAnchor.constraint(equalTo: subContentView.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: subContentView.bottomAnchor),
             
         ])
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
-    @objc private func menuAction() {
-        
-    }
+
 }
 
 extension HomeViewController: UITableViewDelegate {}
@@ -105,7 +110,8 @@ extension HomeViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SubcateTableViewCell.self), for: indexPath)
             return cell
         } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceTableViewCell.self), for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceTableViewCell.self), for: indexPath) as! PlaceTableViewCell
+            cell.setData(mockData)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecommendTableViewCell.self), for: indexPath)

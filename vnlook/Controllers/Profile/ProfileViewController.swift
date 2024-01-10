@@ -7,110 +7,139 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
+    private var topContentView: UIView!
+    private var subContentView: UIView!
     private var imgView: UIImageView!
-    private var subView: UIView!
-    private var locView: UIImageView!
-    private var lblTitle: UILabel!
-    private var lblLocation: UILabel!
-    private var lblSubtitle: UILabel!
-    private var lblDesc: UILabel!
+    private var lblAvatar: UILabel!
+    private var stackView: UIStackView!
+    private var btnUpdate: UIButton!
     
     override func loadView() {
         super.loadView()
         
+        topContentView = UIView()
+        topContentView.backgroundColor = UIColor(hexString: "#04555C")
+        topContentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        subContentView = UIView()
+        subContentView.backgroundColor = .white
+        subContentView.translatesAutoresizingMaskIntoConstraints = false
+        
         imgView = UIImageView()
         imgView.image = UIImage(named: "testing")?.withRenderingMode(.alwaysOriginal)
+        imgView.contentMode = .scaleAspectFill
+        imgView.layer.borderWidth = 5
+        imgView.layer.borderColor = UIColor.white.cgColor
+        imgView.layer.masksToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
         
-        subView = UIView()
-        subView.backgroundColor = .white
-        subView.layer.cornerRadius = 20
-        subView.translatesAutoresizingMaskIntoConstraints = false
+        lblAvatar = UILabel()
+        lblAvatar.text = "Change avatar"
+        lblAvatar.font = .interMedium(14)
+        lblAvatar.textColor = .black
+        lblAvatar.translatesAutoresizingMaskIntoConstraints = false
         
-        lblTitle = UILabel()
-        lblTitle.text = "Dragon Bridge"
-        lblTitle.font = .interBold(24)
-        lblTitle.textColor = .white
-        lblTitle.translatesAutoresizingMaskIntoConstraints = false
+        stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        locView = UIImageView()
-        locView.image = UIImage(systemName: "mappin")
-        locView.tintColor = UIColor(hexString: "#04555C")
-        locView.translatesAutoresizingMaskIntoConstraints = false
+        let username = createSubview("Tên đăng nhập", "tamnguyen")
+        let email = createSubview("Email", "tamnguyen@vnpt.vn")
+        let phone = createSubview("Số điện thoại", "0915567796")
+        let pwd = createSubview("Mật khẩu", "tamnguyen123")
         
-        lblLocation = UILabel()
-        lblLocation.text = "Da Nang"
-        lblLocation.font = .interMedium(18)
-        lblLocation.textColor = UIColor(hexString: "#04555C")
-        lblLocation.translatesAutoresizingMaskIntoConstraints = false
+        let title = "Update"
+        let attrs = [NSAttributedString.Key.font: UIFont.interBold(20), NSAttributedString.Key.foregroundColor: UIColor.white]
+        let normalString = NSMutableAttributedString(string: title, attributes: attrs as [NSAttributedString.Key : Any])
         
-        let subStackView1 = UIStackView(arrangedSubviews: [locView, lblLocation])
-        subStackView1.axis = .horizontal
-        subStackView1.translatesAutoresizingMaskIntoConstraints = false
+        btnUpdate = UIButton(type: .system)
+        btnUpdate.backgroundColor = UIColor(hexString: "#04555C")
+        btnUpdate.setAttributedTitle(normalString, for: .normal)
+        btnUpdate.layer.cornerRadius = 10
+        btnUpdate.translatesAutoresizingMaskIntoConstraints = false
         
-        lblSubtitle = UILabel()
-        lblSubtitle.text = "About the trip"
-        lblSubtitle.font = .interBold(20)
-        lblSubtitle.textColor = UIColor(hexString: "#7D7D7D")
-        lblSubtitle.translatesAutoresizingMaskIntoConstraints = false
-        
-        lblDesc = UILabel()
-        lblDesc.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas et nunc eget elementum. Nunc eros metus, suscipit quis lorem eget, interdum pellentesque elit. Nulla nisi justo, fringilla non congue ut, hendrerit a arcu. Maecenas interdum eros lectus"
-        lblDesc.font = .interRegular(12)
-        lblDesc.textColor = UIColor(hexString: "#7D7D7D")
-        lblDesc.numberOfLines = 0
-        lblDesc.translatesAutoresizingMaskIntoConstraints = false
-        
-        subView.addSubview(subStackView1)
-        subView.addSubview(lblSubtitle)
-        subView.addSubview(lblDesc)
+        stackView.addArrangedSubview(username)
+        stackView.addArrangedSubview(email)
+        stackView.addArrangedSubview(phone)
+        stackView.addArrangedSubview(pwd)
+        subContentView.addSubview(lblAvatar)
+        subContentView.addSubview(stackView)
+        subContentView.addSubview(btnUpdate)
+        view.addSubview(topContentView)
+        view.addSubview(subContentView)
         view.addSubview(imgView)
-        view.addSubview(subView)
-        view.addSubview(lblTitle)
         
         NSLayoutConstraint.activate([
-            imgView.topAnchor.constraint(equalTo: view.topAnchor),
-            imgView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imgView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imgView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 2 / 3),
+            topContentView.topAnchor.constraint(equalTo: view.topAnchor),
+            topContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topContentView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 4),
             
-            subView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            subView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            subView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            subView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1 / 2),
+            subContentView.topAnchor.constraint(equalTo: topContentView.bottomAnchor),
+            subContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            subContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            subContentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            lblTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            lblTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            lblTitle.bottomAnchor.constraint(equalTo: subView.topAnchor, constant: -8),
+            imgView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imgView.centerYAnchor.constraint(equalTo: topContentView.bottomAnchor),
+            imgView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1 / 3),
+            imgView.heightAnchor.constraint(equalTo: imgView.widthAnchor),
             
-            subStackView1.topAnchor.constraint(equalTo: subView.topAnchor, constant: 16),
-            subStackView1.leadingAnchor.constraint(equalTo: subView.leadingAnchor, constant: 13),
+            lblAvatar.topAnchor.constraint(equalTo: imgView.bottomAnchor, constant: 8),
+            lblAvatar.centerXAnchor.constraint(equalTo: subContentView.centerXAnchor),
             
-            lblSubtitle.topAnchor.constraint(equalTo: subStackView1.bottomAnchor, constant: 16),
-            lblSubtitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            stackView.topAnchor.constraint(equalTo: lblAvatar.bottomAnchor, constant: 8),
+            stackView.leadingAnchor.constraint(equalTo: subContentView.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -16),
+            stackView.bottomAnchor.constraint(equalTo: btnUpdate.topAnchor, constant: -8),
             
-            lblDesc.topAnchor.constraint(equalTo: lblSubtitle.bottomAnchor, constant: 8),
-            lblDesc.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            lblDesc.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
+            btnUpdate.centerXAnchor.constraint(equalTo: subContentView.centerXAnchor),
+            btnUpdate.widthAnchor.constraint(equalTo: subContentView.widthAnchor, multiplier: 2 / 3),
+            btnUpdate.heightAnchor.constraint(equalToConstant: 48),
+            btnUpdate.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -48)
         ])
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imgView.layer.cornerRadius = imgView.bounds.height / 2
     }
-    */
-
+    
+    @objc private func actionBack() {
+        
+    }
+    
+    private func createSubview(_ title: String, _ value: String = "") -> UIView {
+        let subView = UIView()
+        subView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let lblTitle = UILabel()
+        lblTitle.text = title
+        lblTitle.font = .interMedium(14)
+        lblTitle.textColor = .black
+        lblTitle.translatesAutoresizingMaskIntoConstraints = false
+        
+        let tfView = UITextField()
+        tfView.placeholder = value
+        tfView.textColor = .black
+        tfView.translatesAutoresizingMaskIntoConstraints = false
+        
+        subView.addSubview(lblTitle)
+        subView.addSubview(tfView)
+        
+        NSLayoutConstraint.activate([
+            tfView.topAnchor.constraint(equalTo: lblTitle.bottomAnchor)
+        ])
+        
+        return subView
+    }
 }

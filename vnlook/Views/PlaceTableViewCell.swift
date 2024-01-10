@@ -9,6 +9,7 @@ import UIKit
 
 final class PlaceTableViewCell: CategoryTableViewCell {
     private var collectionView: UICollectionView!
+    private var mockData: PlaceModel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,6 +43,10 @@ final class PlaceTableViewCell: CategoryTableViewCell {
             collectionView.heightAnchor.constraint(equalTo: subContentView.widthAnchor, multiplier: 9 / 20)
         ])
     }
+    
+    func setData(_ data: PlaceModel) {
+        mockData = data
+    }
 }
 
 extension PlaceTableViewCell: UICollectionViewDelegateFlowLayout {
@@ -66,7 +71,8 @@ extension PlaceTableViewCell: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlaceCollectionViewCell.self), for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlaceCollectionViewCell.self), for: indexPath) as! PlaceCollectionViewCell
+        cell.setData(mockData)
         return cell
     }
 }

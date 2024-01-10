@@ -11,20 +11,20 @@ private var homeViewController: HomeViewController = {
     let tabBarItem = UITabBarItem()
     tabBarItem.title = "Home"
     tabBarItem.image = UIImage(systemName: "house")
-    tabBarItem.selectedImage = UIImage(systemName: "house.fill")
+    tabBarItem.selectedImage = UIImage(systemName: "house.fill")?.withTintColor(UIColor(hexString: "#04555C")!)
     
     let viewController = HomeViewController()
     viewController.tabBarItem = tabBarItem
     return viewController
 }()
 
-private var profileViewController: ProfileViewController = {
+private var accountViewController: AccountViewController = {
     let tabBarItem = UITabBarItem()
-    tabBarItem.title = "Profile"
+    tabBarItem.title = "Account"
     tabBarItem.image = UIImage(systemName: "person")
-    tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+    tabBarItem.selectedImage = UIImage(systemName: "person.fill")?.withTintColor(UIColor(hexString: "#04555C")!)
     
-    let viewController = ProfileViewController()
+    let viewController = AccountViewController()
     viewController.tabBarItem = tabBarItem
     return viewController
 }()
@@ -42,10 +42,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        // Tabbar controller
+        UIBarButtonItem.appearance().tintColor = .white
+        
         let tabbarController = UITabBarController()
         tabbarController.delegate = self
-        tabbarController.viewControllers = [homeViewController, profileViewController]
+        tabbarController.viewControllers = [
+            UINavigationController(rootViewController: homeViewController),
+            UINavigationController(rootViewController: accountViewController)
+        ]
         tabbarController.tabBar.tintColor = UIColor(hexString: "#04555C")
 
         window.rootViewController = tabbarController

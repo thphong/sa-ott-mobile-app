@@ -19,7 +19,7 @@ final class ProfileViewController: UIViewController {
         super.loadView()
         
         topContentView = UIView()
-        topContentView.backgroundColor = UIColor(hexString: "#04555C")
+        topContentView.backgroundColor = UIColor(hexString: "#027368")
         topContentView.translatesAutoresizingMaskIntoConstraints = false
         
         subContentView = UIView()
@@ -55,7 +55,7 @@ final class ProfileViewController: UIViewController {
         let normalString = NSMutableAttributedString(string: title, attributes: attrs as [NSAttributedString.Key : Any])
         
         btnUpdate = UIButton(type: .system)
-        btnUpdate.backgroundColor = UIColor(hexString: "#04555C")
+        btnUpdate.backgroundColor = UIColor(hexString: "#027368")
         btnUpdate.setAttributedTitle(normalString, for: .normal)
         btnUpdate.layer.cornerRadius = 10
         btnUpdate.translatesAutoresizingMaskIntoConstraints = false

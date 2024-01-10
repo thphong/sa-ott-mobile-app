@@ -32,12 +32,12 @@ final class DetailViewController: UIViewController {
         lblTitle = UILabel()
         lblTitle.text = "Dragon Bridge"
         lblTitle.font = .interBold(24)
-        lblTitle.textColor = .white
+        lblTitle.textColor = UIColor(hexString: "#F2EBBC")
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
         
         locView = UIImageView()
         locView.image = UIImage(systemName: "mappin")
-        locView.tintColor = UIColor(hexString: "#04555C")
+        locView.tintColor = UIColor(hexString: "#025959")
         locView.translatesAutoresizingMaskIntoConstraints = false
         
         likeView = UIImageView()
@@ -48,7 +48,7 @@ final class DetailViewController: UIViewController {
         lblLocation = UILabel()
         lblLocation.text = "Da Nang"
         lblLocation.font = .interMedium(18)
-        lblLocation.textColor = UIColor(hexString: "#04555C")
+        lblLocation.textColor = UIColor(hexString: "#025959")
         lblLocation.translatesAutoresizingMaskIntoConstraints = false
         
         let subStackView1 = UIStackView(arrangedSubviews: [locView, lblLocation])
@@ -58,13 +58,13 @@ final class DetailViewController: UIViewController {
         lblSubtitle = UILabel()
         lblSubtitle.text = "About the trip"
         lblSubtitle.font = .interBold(20)
-        lblSubtitle.textColor = UIColor(hexString: "#7D7D7D")
+        lblSubtitle.textColor = UIColor(hexString: "#D99962")
         lblSubtitle.translatesAutoresizingMaskIntoConstraints = false
         
         lblDesc = UILabel()
         lblDesc.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas et nunc eget elementum. Nunc eros metus, suscipit quis lorem eget, interdum pellentesque elit. Nulla nisi justo, fringilla non congue ut, hendrerit a arcu. Maecenas interdum eros lectus"
         lblDesc.font = .interRegular(12)
-        lblDesc.textColor = UIColor(hexString: "#7D7D7D")
+        lblDesc.textColor = UIColor(hexString: "#D99962")
         lblDesc.numberOfLines = 0
         lblDesc.translatesAutoresizingMaskIntoConstraints = false
         
@@ -89,8 +89,6 @@ final class DetailViewController: UIViewController {
             
             likeView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             likeView.centerYAnchor.constraint(equalTo: subView.topAnchor),
-            // likeView.widthAnchor.constraint(equalToConstant: 48),
-            // likeView.heightAnchor.constraint(equalTo: likeView.widthAnchor),
             
             lblTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             lblTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor),

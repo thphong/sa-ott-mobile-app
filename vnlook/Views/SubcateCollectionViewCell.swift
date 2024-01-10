@@ -37,7 +37,7 @@ final class SubcateCollectionViewCell: UICollectionViewCell {
         lblTitle = UILabel()
         lblTitle.text = "South"
         lblTitle.font = UIFont.interRegular(14)
-        lblTitle.textColor = .yellow
+        lblTitle.textColor = UIColor(hexString: "#F2EBDC")
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
         
         subView.addSubview(imgView)

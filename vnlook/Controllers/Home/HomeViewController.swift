@@ -19,7 +19,7 @@ final class HomeViewController: BaseViewController {
         super.loadView()
         
         topContentView = UIView()
-        topContentView.backgroundColor = UIColor(hexString: "#04555C")
+        topContentView.backgroundColor = UIColor(hexString: "#025959")
         topContentView.translatesAutoresizingMaskIntoConstraints = false
         
         subContentView = UIView()
@@ -28,7 +28,7 @@ final class HomeViewController: BaseViewController {
         
         searchBar = UISearchBar()
         searchBar.delegate = self
-        searchBar.backgroundColor = .white
+        searchBar.backgroundColor = UIColor(hexString: "#D99962")
         searchBar.searchTextField.backgroundColor = .clear
         searchBar.layer.cornerRadius = 10
         searchBar.clipsToBounds = true
@@ -37,7 +37,7 @@ final class HomeViewController: BaseViewController {
         
         lblTitle = UILabel()
         lblTitle.text = "Explore the beautiful places"
-        lblTitle.textColor = .white
+        lblTitle.textColor = UIColor(hexString: "#F2EBDC")
         lblTitle.font = .interBold(24)
         lblTitle.numberOfLines = 2
         lblTitle.translatesAutoresizingMaskIntoConstraints = false

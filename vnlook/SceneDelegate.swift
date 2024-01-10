@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UINavigationController(rootViewController: homeViewController),
             UINavigationController(rootViewController: accountViewController)
         ]
-        tabbarController.tabBar.tintColor = UIColor(hexString: "#04555C")
+        tabbarController.tabBar.tintColor = UIColor(hexString: "#025959")
 
         window.rootViewController = tabbarController
         

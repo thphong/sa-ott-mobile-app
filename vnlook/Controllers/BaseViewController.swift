@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class BaseViewController: UIViewController {
     
@@ -31,11 +32,9 @@ class BaseViewController: UIViewController {
     
     @objc private func menuAction() {
         let vc = SideMenuViewController()
-//        vc.view.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            vc.view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1 / 4)
-//        ])
-        present(vc, animated: true)
+        let menu = SideMenuNavigationController(rootViewController: vc)
+        menu.leftSide = true
+        present(menu, animated: true)
     }
     
     @objc private func notifyAction() {

@@ -33,7 +33,7 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
         
         lblTitle = UILabel()
         lblTitle.font = .interBold(14)
-        lblTitle.textColor = .yellow
+        lblTitle.textColor = UIColor(hexString: "#F2EBBC")
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
         
         locView = UIImageView()
@@ -43,7 +43,7 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
         
         lblLocation = UILabel()
         lblLocation.font = .interMedium(12)
-        lblLocation.textColor = .yellow
+        lblLocation.textColor = UIColor(hexString: "#F2EBBC")
         lblLocation.translatesAutoresizingMaskIntoConstraints = false
         
         ratingView = UIImageView()
@@ -53,7 +53,7 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
         
         lblRating = UILabel()
         lblRating.font = .interMedium(12)
-        lblRating.textColor = .yellow
+        lblRating.textColor = UIColor(hexString: "#F2EBBC")
         lblRating.translatesAutoresizingMaskIntoConstraints = false
         
         let subStackView1 = UIStackView(arrangedSubviews: [locView, lblLocation])

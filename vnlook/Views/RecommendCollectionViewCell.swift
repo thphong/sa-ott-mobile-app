@@ -46,7 +46,7 @@ final class RecommendCollectionViewCell: UICollectionViewCell {
         lblLocation = UILabel()
         lblLocation.text = "Da Nang"
         lblLocation.font = .interMedium(12)
-        lblLocation.textColor = .yellow
+        lblLocation.textColor = UIColor(hexString: "#F2EBBC")
         lblLocation.translatesAutoresizingMaskIntoConstraints = false
         
         ratingView = UIImageView()
@@ -57,13 +57,13 @@ final class RecommendCollectionViewCell: UICollectionViewCell {
         lblRating = UILabel()
         lblRating.text = "4.5"
         lblRating.font = .interMedium(12)
-        lblRating.textColor = .yellow
+        lblRating.textColor = UIColor(hexString: "#F2EBBC")
         lblRating.translatesAutoresizingMaskIntoConstraints = false
         
         lblDesc = UILabel()
         lblDesc.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas et nunc eget elementum. Nunc eros metus, suscipit quis lorem eget, interdum pellentesque elit. Nulla nisi justo, fringilla non congue ut, hendrerit a arcu. Maecenas interdum eros lectus"
         lblDesc.font = .interMedium(12)
-        lblDesc.textColor = .white
+        lblDesc.textColor = UIColor(hexString: "#F2EBBC")
         lblDesc.numberOfLines = 3
         lblDesc.translatesAutoresizingMaskIntoConstraints = false
         

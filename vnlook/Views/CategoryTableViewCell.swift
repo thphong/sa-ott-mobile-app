@@ -26,12 +26,12 @@ class CategoryTableViewCell: UITableViewCell {
         lblTitle = UILabel()
         lblTitle.text = "Regions"
         lblTitle.font = .interBold(16)
-        lblTitle.textColor = .black
+        lblTitle.textColor = UIColor(hexString: "#027368")
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
         
         btnMore = UIButton(type: .system)
         btnMore.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        btnMore.tintColor = .black
+        btnMore.tintColor = UIColor(hexString: "#027368")
         btnMore.addTarget(self, action: #selector(moreTapped), for: .touchUpInside)
         btnMore.translatesAutoresizingMaskIntoConstraints = false
         

@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol PlaceTableViewCellDelegate {
+    func onDataSelected(_ data: PlaceModel)
+}
+
 final class PlaceTableViewCell: CategoryTableViewCell {
     private var collectionView: UICollectionView!
     private var mockData: PlaceModel!
+    
+    var delegate: PlaceTableViewCellDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,6 +27,8 @@ final class PlaceTableViewCell: CategoryTableViewCell {
     }
     
     private func configureContents() {
+        selectionStyle = .none
+        
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 16
@@ -58,7 +66,9 @@ extension PlaceTableViewCell: UICollectionViewDelegateFlowLayout {
 }
 
 extension PlaceTableViewCell: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.onDataSelected(mockData)
+    }
 }
 
 extension PlaceTableViewCell: UICollectionViewDataSource {

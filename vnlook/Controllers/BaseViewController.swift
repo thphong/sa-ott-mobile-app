@@ -32,13 +32,32 @@ class BaseViewController: UIViewController {
     
     @objc private func menuAction() {
         let vc = SideMenuViewController()
+        vc.delegate = self
         let menu = SideMenuNavigationController(rootViewController: vc)
         menu.leftSide = true
         present(menu, animated: true)
     }
     
     @objc private func notifyAction() {
-        let vc = DetailViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
+}
+
+extension BaseViewController: SideMenuViewControllerDelegate {
+    func selectedCell(_ row: Int) {
+        var vc: UIViewController = HomeViewController()
+        switch row {
+        case 0:
+            vc = HomeViewController()
+        case 1:
+            vc = AccountViewController()
+        case 2:
+            vc = AboutUsViewController()
+        default:
+            break
+        }
+        dismiss(animated: true, completion: {
+            self.navigationController?.pushViewController(vc, animated: true)
+        })
     }
 }

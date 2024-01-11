@@ -16,6 +16,19 @@ final class DetailViewController: UIViewController {
     private var lblLocation: UILabel!
     private var lblSubtitle: UILabel!
     private var lblDesc: UILabel!
+    private var purchaseView: UIView!
+    private var lblPrice: UILabel!
+    private var btnPurchase: UIButton!
+    private var mockData: PlaceModel!
+    
+    init(_ data: PlaceModel) {
+        super.init(nibName: nil, bundle: nil)
+        mockData = data
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         super.loadView()
@@ -30,7 +43,7 @@ final class DetailViewController: UIViewController {
         subView.translatesAutoresizingMaskIntoConstraints = false
         
         lblTitle = UILabel()
-        lblTitle.text = "Dragon Bridge"
+        lblTitle.text = mockData.name
         lblTitle.font = .interBold(24)
         lblTitle.textColor = UIColor(hexString: "#F2EBBC")
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +59,7 @@ final class DetailViewController: UIViewController {
         likeView.translatesAutoresizingMaskIntoConstraints = false
         
         lblLocation = UILabel()
-        lblLocation.text = "Da Nang"
+        lblLocation.text = mockData.location
         lblLocation.font = .interMedium(18)
         lblLocation.textColor = UIColor(hexString: "#025959")
         lblLocation.translatesAutoresizingMaskIntoConstraints = false
@@ -62,15 +75,39 @@ final class DetailViewController: UIViewController {
         lblSubtitle.translatesAutoresizingMaskIntoConstraints = false
         
         lblDesc = UILabel()
-        lblDesc.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas et nunc eget elementum. Nunc eros metus, suscipit quis lorem eget, interdum pellentesque elit. Nulla nisi justo, fringilla non congue ut, hendrerit a arcu. Maecenas interdum eros lectus"
+        lblDesc.text = mockData.description
         lblDesc.font = .interRegular(12)
         lblDesc.textColor = UIColor(hexString: "#D99962")
         lblDesc.numberOfLines = 0
         lblDesc.translatesAutoresizingMaskIntoConstraints = false
         
+        purchaseView = UIView()
+        purchaseView.backgroundColor = UIColor(hexString: "#025959")
+        purchaseView.layer.cornerRadius = 20
+        purchaseView.translatesAutoresizingMaskIntoConstraints = false
+        
+        lblPrice = UILabel()
+        lblPrice.text = "$\(mockData.price)/PER PERSON"
+        lblPrice.font = .interMedium(16)
+        lblPrice.textColor = UIColor(hexString: "#F2EBDC")
+        lblPrice.translatesAutoresizingMaskIntoConstraints = false
+        
+        let title = "BOOK NOW"
+        let attrs = [NSAttributedString.Key.font: UIFont.interBold(16), NSAttributedString.Key.foregroundColor: UIColor(hexString: "#027368")]
+        let normalString = NSMutableAttributedString(string: title, attributes: attrs as [NSAttributedString.Key : Any])
+        
+        btnPurchase = UIButton(type: .system)
+        btnPurchase.backgroundColor = UIColor(hexString: "#F2EBDC")
+        btnPurchase.setAttributedTitle(normalString, for: .normal)
+        btnPurchase.layer.cornerRadius = 10
+        btnPurchase.translatesAutoresizingMaskIntoConstraints = false
+        
+        purchaseView.addSubview(lblPrice)
+        purchaseView.addSubview(btnPurchase)
         subView.addSubview(subStackView1)
         subView.addSubview(lblSubtitle)
         subView.addSubview(lblDesc)
+        subView.addSubview(purchaseView)
         view.addSubview(imgView)
         view.addSubview(subView)
         view.addSubview(lblTitle)
@@ -98,11 +135,24 @@ final class DetailViewController: UIViewController {
             subStackView1.leadingAnchor.constraint(equalTo: subView.leadingAnchor, constant: 13),
             
             lblSubtitle.topAnchor.constraint(equalTo: subStackView1.bottomAnchor, constant: 16),
-            lblSubtitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            lblSubtitle.leadingAnchor.constraint(equalTo: subView.leadingAnchor, constant: 16),
              
             lblDesc.topAnchor.constraint(equalTo: lblSubtitle.bottomAnchor, constant: 8),
-            lblDesc.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            lblDesc.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            lblDesc.leadingAnchor.constraint(equalTo: subView.leadingAnchor, constant: 16),
+            lblDesc.trailingAnchor.constraint(equalTo: subView.trailingAnchor, constant: -16),
+            
+            purchaseView.leadingAnchor.constraint(equalTo: subView.leadingAnchor),
+            purchaseView.trailingAnchor.constraint(equalTo: subView.trailingAnchor),
+            purchaseView.bottomAnchor.constraint(equalTo: subView.bottomAnchor),
+            purchaseView.heightAnchor.constraint(equalTo: subView.heightAnchor, multiplier: 1 / 4),
+            
+            lblPrice.leadingAnchor.constraint(equalTo: purchaseView.leadingAnchor, constant: 16),
+            lblPrice.centerYAnchor.constraint(equalTo: purchaseView.centerYAnchor),
+            
+            btnPurchase.trailingAnchor.constraint(equalTo: purchaseView.trailingAnchor, constant: -16),
+            btnPurchase.centerYAnchor.constraint(equalTo: purchaseView.centerYAnchor),
+            btnPurchase.heightAnchor.constraint(equalToConstant: 48),
+            btnPurchase.widthAnchor.constraint(equalTo: btnPurchase.heightAnchor, multiplier: 5 / 2)
         ])
     }
     

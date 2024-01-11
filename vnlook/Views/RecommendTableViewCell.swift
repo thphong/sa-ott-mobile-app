@@ -20,6 +20,8 @@ final class RecommendTableViewCell: CategoryTableViewCell {
     }
     
     private func configureContents() {
+        selectionStyle = .none
+        
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 16

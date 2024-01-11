@@ -107,11 +107,13 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SubcateTableViewCell.self), for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SubcateTableViewCell.self), for: indexPath) as! SubcateTableViewCell
+            cell.delegate = self
             return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceTableViewCell.self), for: indexPath) as! PlaceTableViewCell
             cell.setData(mockData)
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecommendTableViewCell.self), for: indexPath)
@@ -127,5 +129,21 @@ extension HomeViewController: UISearchBarDelegate {
         }
         
         searchBar.resignFirstResponder() // Hide the keyboard
+    }
+}
+
+extension HomeViewController: PlaceTableViewCellDelegate {
+    func onDataSelected(_ data: PlaceModel) {
+        let vc = DetailViewController(data)
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension HomeViewController: SubcateTableViewCellDelegate {
+    func onDataSelected() {
+        let vc = ListViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

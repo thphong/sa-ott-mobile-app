@@ -29,9 +29,9 @@ final class SubcateCollectionViewCell: UICollectionViewCell {
         
         imgView = UIImageView()
         imgView.image = UIImage(named: "testing")
-        imgView.contentMode = .scaleAspectFit
+        imgView.contentMode = .scaleAspectFill
         imgView.layer.cornerRadius = 10
-        imgView.clipsToBounds = true
+        imgView.layer.masksToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
         
         lblTitle = UILabel()
@@ -49,10 +49,11 @@ final class SubcateCollectionViewCell: UICollectionViewCell {
             subView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             subView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             subView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            subView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            imgView.topAnchor.constraint(equalTo: subView.topAnchor),
+            imgView.topAnchor.constraint(equalTo: subView.topAnchor, constant: 8),
             imgView.leadingAnchor.constraint(equalTo: subView.leadingAnchor, constant: 8),
-            imgView.bottomAnchor.constraint(equalTo: subView.bottomAnchor),
+            imgView.bottomAnchor.constraint(equalTo: subView.bottomAnchor, constant: -8),
             imgView.widthAnchor.constraint(equalTo: imgView.heightAnchor),
             
             lblTitle.topAnchor.constraint(equalTo: subView.topAnchor),

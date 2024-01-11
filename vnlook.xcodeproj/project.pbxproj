@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85073DEBAABA387A54AE3817 /* Pods_vnlook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037BDD9E81DB064C405244EB /* Pods_vnlook.framework */; };
 		E944BD292B4ECA0000767258 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = E944BD282B4ECA0000767258 /* SideMenu */; };
 		E944BD2B2B4EE02900767258 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944BD2A2B4EE02900767258 /* SideMenuTableViewCell.swift */; };
 		E944BD2D2B4EE46700767258 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E944BD2C2B4EE46700767258 /* SideMenuModel.swift */; };
 		E94B574C2B4E82BB00EFE9A9 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B574B2B4E82BB00EFE9A9 /* SideMenuViewController.swift */; };
 		E94B574E2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B574D2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift */; };
 		E94B57502B4E94A100EFE9A9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B574F2B4E94A100EFE9A9 /* UIImageExtension.swift */; };
+		E9568AA52B4FAA72002A1AB0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9568AA42B4FAA72002A1AB0 /* ListViewController.swift */; };
+		E9568AA72B4FAF83002A1AB0 /* PlaceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9568AA62B4FAF83002A1AB0 /* PlaceListTableViewCell.swift */; };
+		E97C97802B4FE83A00431B2C /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C977F2B4FE83A00431B2C /* AboutUsViewController.swift */; };
 		E98570802B4E2FE000BC4840 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985707F2B4E2FE000BC4840 /* HomeViewController.swift */; };
 		E985863D2B4BE24500DE7780 /* RecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985863C2B4BE24500DE7780 /* RecommendTableViewCell.swift */; };
 		E985863F2B4BE3BD00DE7780 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985863E2B4BE3BD00DE7780 /* RecommendCollectionViewCell.swift */; };
@@ -40,11 +44,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		037BDD9E81DB064C405244EB /* Pods_vnlook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vnlook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6CB1F074E0F913F9916A91 /* Pods-vnlook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vnlook.debug.xcconfig"; path = "Target Support Files/Pods-vnlook/Pods-vnlook.debug.xcconfig"; sourceTree = "<group>"; };
+		99FDE3AAFE89FA959EEDB570 /* Pods-vnlook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vnlook.release.xcconfig"; path = "Target Support Files/Pods-vnlook/Pods-vnlook.release.xcconfig"; sourceTree = "<group>"; };
 		E944BD2A2B4EE02900767258 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		E944BD2C2B4EE46700767258 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		E94B574B2B4E82BB00EFE9A9 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		E94B574D2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E94B574F2B4E94A100EFE9A9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E9568AA42B4FAA72002A1AB0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E9568AA62B4FAF83002A1AB0 /* PlaceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListTableViewCell.swift; sourceTree = "<group>"; };
+		E97C977F2B4FE83A00431B2C /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		E985707F2B4E2FE000BC4840 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E985863C2B4BE24500DE7780 /* RecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendTableViewCell.swift; sourceTree = "<group>"; };
 		E985863E2B4BE3BD00DE7780 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -79,12 +89,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E944BD292B4ECA0000767258 /* SideMenu in Frameworks */,
+				85073DEBAABA387A54AE3817 /* Pods_vnlook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1466FD915144B8117B3649CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E6CB1F074E0F913F9916A91 /* Pods-vnlook.debug.xcconfig */,
+				99FDE3AAFE89FA959EEDB570 /* Pods-vnlook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		259860A7EC48F53A71C031F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				037BDD9E81DB064C405244EB /* Pods_vnlook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9BE704A2B4CEC4800A03CE5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +127,8 @@
 			children = (
 				E9D3CE1F2B4B8C120076E2E0 /* vnlook */,
 				E9D3CE1E2B4B8C120076E2E0 /* Products */,
+				1466FD915144B8117B3649CE /* Pods */,
+				259860A7EC48F53A71C031F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +168,7 @@
 				E985863C2B4BE24500DE7780 /* RecommendTableViewCell.swift */,
 				E985863E2B4BE3BD00DE7780 /* RecommendCollectionViewCell.swift */,
 				E944BD2A2B4EE02900767258 /* SideMenuTableViewCell.swift */,
+				E9568AA62B4FAF83002A1AB0 /* PlaceListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +237,8 @@
 				E985707F2B4E2FE000BC4840 /* HomeViewController.swift */,
 				E9C2B2892B4E728D00647802 /* DetailViewController.swift */,
 				E94B574B2B4E82BB00EFE9A9 /* SideMenuViewController.swift */,
+				E9568AA42B4FAA72002A1AB0 /* ListViewController.swift */,
+				E97C977F2B4FE83A00431B2C /* AboutUsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9D3CE312B4B8C130076E2E0 /* Build configuration list for PBXNativeTarget "vnlook" */;
 			buildPhases = (
+				80F89F257D191B97794398A3 /* [CP] Check Pods Manifest.lock */,
 				E9D3CE192B4B8C120076E2E0 /* Sources */,
 				E9D3CE1A2B4B8C120076E2E0 /* Frameworks */,
 				E9D3CE1B2B4B8C120076E2E0 /* Resources */,
+				1D4655CB63E5C8D10A612FC7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +321,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D4655CB63E5C8D10A612FC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vnlook/Pods-vnlook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vnlook/Pods-vnlook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vnlook/Pods-vnlook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80F89F257D191B97794398A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vnlook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E9D3CE192B4B8C120076E2E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -296,6 +373,7 @@
 				E9D3CE4A2B4BC9A80076E2E0 /* UIFontExtension.swift in Sources */,
 				E94B57502B4E94A100EFE9A9 /* UIImageExtension.swift in Sources */,
 				E9C2B2882B4E5D2000647802 /* AccountViewController.swift in Sources */,
+				E97C97802B4FE83A00431B2C /* AboutUsViewController.swift in Sources */,
 				E9D3CE3B2B4B9B740076E2E0 /* UIColorExtension.swift in Sources */,
 				E9D3CE252B4B8C120076E2E0 /* BaseViewController.swift in Sources */,
 				E985863F2B4BE3BD00DE7780 /* RecommendCollectionViewCell.swift in Sources */,
@@ -306,9 +384,11 @@
 				E985863D2B4BE24500DE7780 /* RecommendTableViewCell.swift in Sources */,
 				E9D3CE232B4B8C120076E2E0 /* SceneDelegate.swift in Sources */,
 				E9BE704C2B4CEC6500A03CE5 /* ProfileViewController.swift in Sources */,
+				E9568AA52B4FAA72002A1AB0 /* ListViewController.swift in Sources */,
 				E944BD2D2B4EE46700767258 /* SideMenuModel.swift in Sources */,
 				E9BE704E2B4D455900A03CE5 /* PlaceModel.swift in Sources */,
 				E9D3CE352B4B8D510076E2E0 /* SubcateTableViewCell.swift in Sources */,
+				E9568AA72B4FAF83002A1AB0 /* PlaceListTableViewCell.swift in Sources */,
 				E94B574E2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift in Sources */,
 				E944BD2B2B4EE02900767258 /* SideMenuTableViewCell.swift in Sources */,
 				E94B574C2B4E82BB00EFE9A9 /* SideMenuViewController.swift in Sources */,
@@ -459,12 +539,14 @@
 		};
 		E9D3CE322B4B8C130076E2E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6CB1F074E0F913F9916A91 /* Pods-vnlook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 454WE666RP;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = vnlook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -487,12 +569,14 @@
 		};
 		E9D3CE332B4B8C130076E2E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99FDE3AAFE89FA959EEDB570 /* Pods-vnlook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 454WE666RP;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = vnlook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SideMenuViewControllerDelegate {
+    func selectedCell(_ row: Int)
+}
+
 final class SideMenuViewController: UIViewController {
     private var topView: UIView!
     private var bottomView: UIView!
@@ -15,12 +19,15 @@ final class SideMenuViewController: UIViewController {
     private var lblEmail: UILabel!
     private var lblAuthor: UILabel!
     private var tableView: UITableView!
+    private var menus: [SideMenuModel] = [
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Home"),
+        SideMenuModel(icon: UIImage(systemName: "person.fill")!, title: "Profile"),
+        SideMenuModel(icon: UIImage(systemName: "person.2.fill")!, title: "About Us"),
+        SideMenuModel(icon: UIImage(systemName: "phone.fill")!, title: "Contact Us"),
+        SideMenuModel(icon: UIImage(systemName: "rectangle.portrait.and.arrow.right.fill")!, title: "Sign Out")
+    ]
     
-    var menu: [SideMenuModel] = [
-            SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Home"),
-            SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "Music"),
-            SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Movies")
-        ]
+    var delegate: SideMenuViewControllerDelegate?
     
     override func loadView() {
         super.loadView()
@@ -60,6 +67,7 @@ final class SideMenuViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        tableView.isScrollEnabled = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(SideMenuTableViewCell.self, forCellReuseIdentifier: String(describing: SideMenuTableViewCell.self))
         
@@ -127,7 +135,9 @@ final class SideMenuViewController: UIViewController {
 }
 
 extension SideMenuViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.selectedCell(indexPath.row)
+    }
 }
 
 extension SideMenuViewController: UITableViewDataSource {
@@ -136,12 +146,12 @@ extension SideMenuViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return menus.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SideMenuTableViewCell.self), for: indexPath) as! SideMenuTableViewCell
-        cell.setData(menu[indexPath.row])
+        cell.setData(menus[indexPath.row])
         return cell
     }
 }

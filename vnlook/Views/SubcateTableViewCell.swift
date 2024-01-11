@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol SubcateTableViewCellDelegate {
+    func onDataSelected()
+}
+
 final class SubcateTableViewCell: CategoryTableViewCell {
     private var collectionView: UICollectionView!
+    
+    var delegate: SubcateTableViewCellDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,6 +26,8 @@ final class SubcateTableViewCell: CategoryTableViewCell {
     }
     
     private func configureContents() {
+        selectionStyle = .none
+        
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 16
@@ -54,7 +62,9 @@ extension SubcateTableViewCell: UICollectionViewDelegateFlowLayout {
 }
 
 extension SubcateTableViewCell: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.onDataSelected()
+    }
 }
 
 extension SubcateTableViewCell: UICollectionViewDataSource {

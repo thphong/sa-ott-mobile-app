@@ -9,39 +9,82 @@ import UIKit
 import Cards
 
 final class AboutUsViewController: UIViewController {
-
+    private var collectionView: UICollectionView!
+    
     override func loadView() {
         super.loadView()
-        view.backgroundColor = .brown
-        let card = CardHighlight()
-
-        card.backgroundColor = UIColor(red: 0, green: 94/255, blue: 112/255, alpha: 1)
-        card.icon = UIImage(named: "testing")?.withRenderingMode(.alwaysOriginal)
-        card.title = "Tam Nguyen"
-        card.itemTitle = "Tech Dev"
-        card.itemSubtitle = "HCMUT"
-        card.textColor = UIColor.white
-        card.buttonText = "View"
-        card.hasParallax = true
-            
-        // let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
-        // card.shouldPresent(cardContentVC, from: self, fullscreen: false)
-        card.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(card)
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.minimumInteritemSpacing = 16
+        flowLayout.minimumLineSpacing = 16
+        flowLayout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.alwaysBounceHorizontal = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(AboutUsCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: AboutUsCollectionViewCell.self))
+        
+        view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
-            card.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            card.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            card.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1 / 2),
-            card.heightAnchor.constraint(equalTo: card.widthAnchor)
-            // card.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor(hexString: "#5DA6A6")
+        navigationItem.title = "About Us"
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
     }
 
+}
+
+extension AboutUsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { return .zero }
+        
+        let width: CGFloat = itemWidth(collectionView: collectionView, layout: layout, column: 2, columnIPad: 4, additionalColumn: 0)
+        let height: CGFloat = width 
+        return CGSize(width: width, height: height)
+    }
+}
+
+extension AboutUsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Hail !!!")
+    }
+}
+
+extension AboutUsViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AboutUsCollectionViewCell.self), for: indexPath) as! AboutUsCollectionViewCell
+        cell.delegate = self
+        return cell
+    }
+}
+
+extension AboutUsViewController: AboutUsCollectionViewCellDelegate {
+    func onDataSelected(_ card: CardHighlight) {
+        print("Hydra !")
+        let vc = CardContentViewController()
+        card.shouldPresent(vc, from: self, fullscreen: false)
+    }
 }

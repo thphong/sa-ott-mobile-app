@@ -76,7 +76,7 @@
 		830082F38B4D1A16A97FD0A03846C036 /* Player.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Sources/Player.swift; sourceTree = "<group>"; };
 		98F288333EBAFCA6C30215918C0AA19E /* Player.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Player.modulemap; sourceTree = "<group>"; };
 		9D2C515D740C5787D36D120D3661B1B2 /* Pods-vnlook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-vnlook-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA1F2C6A2EC2968896C9E92D514A088A /* CardPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardPlayer.swift; path = Cards/Sources/CardPlayer.swift; sourceTree = "<group>"; };
 		B1734AAE0E20796269B71179BBF021A5 /* Pods-vnlook */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-vnlook"; path = Pods_vnlook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4239326BA4D7759403BD44BE08FC9E9 /* CardGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardGroup.swift; path = Cards/Sources/CardGroup.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		E04AEC9E4ADFC36469C4E9E8DCB1A288 /* Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Player.debug.xcconfig; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EAD3F2964F9AE18AFCC374E59FBF7D1E /* CardHighlight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardHighlight.swift; path = Cards/Sources/CardHighlight.swift; sourceTree = "<group>"; };
-		EC7F06F364614C51E830F26C60172A0B /* Cards */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cards; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7F06F364614C51E830F26C60172A0B /* Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B8DC0247AE4F2DCDCD867072D137F9 /* Pods-vnlook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-vnlook-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,7 +150,7 @@
 		2FC8D1A15F85E1BA98957025BD3DD193 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC7F06F364614C51E830F26C60172A0B /* Cards */,
+				EC7F06F364614C51E830F26C60172A0B /* Cards.framework */,
 				5C08AE3835639A2111ACBCE5382CE742 /* Player */,
 				B1734AAE0E20796269B71179BBF021A5 /* Pods-vnlook */,
 			);
@@ -180,7 +180,6 @@
 				4F244E6C36B7220912B0120CD6583AD9 /* LayoutHelper.swift */,
 				05B29E19659B85BDBACFE4F98E5F2D91 /* Support Files */,
 			);
-			name = Cards;
 			path = Cards;
 			sourceTree = "<group>";
 		};
@@ -190,7 +189,6 @@
 				830082F38B4D1A16A97FD0A03846C036 /* Player.swift */,
 				C176B233D448DFE4968168B99764938D /* Support Files */,
 			);
-			name = Player;
 			path = Player;
 			sourceTree = "<group>";
 		};
@@ -338,7 +336,7 @@
 			);
 			name = Cards;
 			productName = Cards;
-			productReference = EC7F06F364614C51E830F26C60172A0B /* Cards */;
+			productReference = EC7F06F364614C51E830F26C60172A0B /* Cards.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -665,7 +663,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Cards/Cards-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Cards/Cards-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,7 +772,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Cards/Cards-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Cards/Cards-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -18,11 +18,6 @@ final class ListViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        view.backgroundColor = UIColor(hexString: "#5DA6A6")
-        navigationItem.title = "South"
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
-        
         tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,7 +42,10 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor(hexString: "#5DA6A6")
+        navigationItem.title = "South"
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
     }
 }
 

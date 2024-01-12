@@ -64,7 +64,15 @@ extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PlaceListTableViewCell.self), for: indexPath) as! PlaceListTableViewCell
+        cell.delegate = self
         cell.setData(mockDatas[indexPath.row])
         return cell
+    }
+}
+
+extension ListViewController: PlaceListTableViewCellDelegate {
+    func onDataSelected(_ data: PlaceModel) {
+        let vc = DetailViewController(data)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

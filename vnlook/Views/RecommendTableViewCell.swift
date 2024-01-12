@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol RecommendTableViewCellDelegate {
+    func onRecommendSelected(_ data: PlaceModel)
+}
+
 final class RecommendTableViewCell: CategoryTableViewCell {
     private var collectionView: UICollectionView!
+    private var mockData: PlaceModel!
+    
+    var delegate: RecommendTableViewCellDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -45,6 +52,9 @@ final class RecommendTableViewCell: CategoryTableViewCell {
         ])
     }
 
+    func setData(_ data: PlaceModel) {
+        mockData = data
+    }
 }
 
 extension RecommendTableViewCell: UICollectionViewDelegateFlowLayout {
@@ -55,7 +65,11 @@ extension RecommendTableViewCell: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension RecommendTableViewCell: UICollectionViewDelegate {}
+extension RecommendTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.onRecommendSelected(mockData)
+    }
+}
 
 extension RecommendTableViewCell: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

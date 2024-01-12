@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PlaceListTableViewCellDelegate {
+    func onDataSelected(_ data: PlaceModel)
+}
+
 final class PlaceListTableViewCell: UITableViewCell {
     private var mainView: UIView!
     private var imgView: UIImageView!
@@ -15,6 +19,9 @@ final class PlaceListTableViewCell: UITableViewCell {
     private var lblDestination: UILabel!
     private var lblPrice: UILabel!
     private var btnView: UIButton!
+    private var placeModel: PlaceModel!
+    
+    var delegate: PlaceListTableViewCellDelegate?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -71,6 +78,7 @@ final class PlaceListTableViewCell: UITableViewCell {
         btnView.setAttributedTitle(normalString, for: .normal)
         btnView.layer.cornerRadius = 10
         btnView.translatesAutoresizingMaskIntoConstraints = false
+        btnView.addTarget(self, action: #selector(actionView), for: .touchUpInside)
         
         stackView.addArrangedSubview(lblTitle)
         stackView.addArrangedSubview(lblDestination)
@@ -104,8 +112,13 @@ final class PlaceListTableViewCell: UITableViewCell {
     }
     
     func setData(_ data: PlaceModel) {
+        placeModel = data
         lblTitle.text = data.name
         lblDestination.text = data.location
         lblPrice.text = String(data.price)
+    }
+    
+    @objc func actionView() {
+        self.delegate?.onDataSelected(placeModel)
     }
 }

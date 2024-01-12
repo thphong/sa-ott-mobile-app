@@ -10,6 +10,12 @@ import Cards
 
 final class AboutUsViewController: UIViewController {
     private var collectionView: UICollectionView!
+    private var mockDatas: [AuthorModel] = [
+        AuthorModel(),
+        AuthorModel(),
+        AuthorModel(),
+        AuthorModel()
+    ]
     
     override func loadView() {
         super.loadView()
@@ -60,9 +66,7 @@ extension AboutUsViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension AboutUsViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Hail !!!")
-    }
+    
 }
 
 extension AboutUsViewController: UICollectionViewDataSource {
@@ -71,20 +75,12 @@ extension AboutUsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return mockDatas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AboutUsCollectionViewCell.self), for: indexPath) as! AboutUsCollectionViewCell
-        cell.delegate = self
+        cell.setData(mockDatas[indexPath.item])
         return cell
-    }
-}
-
-extension AboutUsViewController: AboutUsCollectionViewCellDelegate {
-    func onDataSelected(_ card: CardHighlight) {
-        print("Hydra !")
-        let vc = CardContentViewController()
-        card.shouldPresent(vc, from: self, fullscreen: false)
     }
 }

@@ -8,22 +8,9 @@
 import UIKit
 import Cards
 
-protocol AboutUsCollectionViewCellDelegate {
-    func onDataSelected(_ card: CardHighlight)
-}
-
 final class AboutUsCollectionViewCell: UICollectionViewCell {
     private var card: CardHighlight!
-    var delegate: AboutUsCollectionViewCellDelegate?
-    
-    override var isSelected: Bool {
-        didSet {
-            if isSelected {
-                print("Shiet !")
-                delegate?.onDataSelected(card)
-            }
-        }
-    }
+    private var authorModel: AuthorModel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,16 +23,12 @@ final class AboutUsCollectionViewCell: UICollectionViewCell {
     
     private func configureContents() {
         card = CardHighlight()
+        card.delegate = self
         card.backgroundColor = UIColor(hexString: "#027368")
-        card.icon = UIImage(named: "testing")?.withRenderingMode(.alwaysOriginal)
-        card.title = "Tam Nguyen"
-        card.itemTitle = "Tech Dev"
-        card.itemSubtitle = "HCMUT"
         card.textColor = UIColor(hexString: "#F2EBDC")!
         card.buttonText = "View"
         card.hasParallax = true
         card.translatesAutoresizingMaskIntoConstraints = false
-        card.isUserInteractionEnabled = false
         
         contentView.addSubview(card)
         
@@ -57,7 +40,24 @@ final class AboutUsCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    func setData() {
+    func setData(_ data: AuthorModel) {
+        authorModel = data
+        card.icon = UIImage(named: "testing")?.withRenderingMode(.alwaysOriginal)
+        card.title = data.name
+        card.itemTitle = data.role
+        card.itemSubtitle = data.school
+    }
+}
+
+extension AboutUsCollectionViewCell: CardDelegate {
+    func cardDidTapInside(card: Card) {
+        if let myViewController = parentViewController as? AboutUsViewController {
+            let vc = CardContentViewController(authorModel)
+            card.shouldPresent(vc, from: myViewController, fullscreen: false)
+        }
         
+    }
+    
+    func cardHighlightDidTapButton(card: CardHighlight, button: UIButton) {
     }
 }

@@ -16,7 +16,7 @@ internal class DetailViewController: UIViewController {
     var card: Card!
     weak var delegate: CardDelegate?
     var isFullscreen = false {
-        didSet { scrollViewOriginalYPosition = isFullscreen ? 0 : 40 }
+        didSet { scrollViewOriginalYPosition = isFullscreen ? 0 : 60 }
     }
     
     fileprivate var xButton = XButton()
@@ -151,7 +151,7 @@ internal class DetailViewController: UIViewController {
         } else {
             scrollView.frame.size = CGSize(width: LayoutHelper.XScreen(90), height: LayoutHelper.YScreen(100) - 20)
             scrollView.center = blurView.center
-            scrollView.frame.origin.y = 40
+            scrollView.frame.origin.y = 60
         }
         
         scrollView.frame = scrollView.frame.applying(transform)

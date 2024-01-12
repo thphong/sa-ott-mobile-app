@@ -116,7 +116,9 @@ extension HomeViewController: UITableViewDataSource {
             cell.delegate = self
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecommendTableViewCell.self), for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecommendTableViewCell.self), for: indexPath) as! RecommendTableViewCell
+            cell.setData(mockData)
+            cell.delegate = self
             return cell
         }
     }
@@ -143,6 +145,14 @@ extension HomeViewController: PlaceTableViewCellDelegate {
 extension HomeViewController: SubcateTableViewCellDelegate {
     func onDataSelected() {
         let vc = ListViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension HomeViewController: RecommendTableViewCellDelegate {
+    func onRecommendSelected(_ data: PlaceModel) {
+        let vc = DetailViewController(data)
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

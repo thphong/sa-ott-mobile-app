@@ -53,6 +53,9 @@ extension BaseViewController: SideMenuViewControllerDelegate {
             vc = AccountViewController()
         case 2:
             vc = AboutUsViewController()
+        case 3:
+            vc = ContactUsViewController()
+            vc.hidesBottomBarWhenPushed = true
         default:
             break
         }

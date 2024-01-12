@@ -14,6 +14,8 @@
 		E94B574C2B4E82BB00EFE9A9 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B574B2B4E82BB00EFE9A9 /* SideMenuViewController.swift */; };
 		E94B574E2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B574D2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift */; };
 		E94B57502B4E94A100EFE9A9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B574F2B4E94A100EFE9A9 /* UIImageExtension.swift */; };
+		E95253532B50CBBA001DB530 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95253522B50CBBA001DB530 /* UIViewExtension.swift */; };
+		E95253552B50DDDD001DB530 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95253542B50DDDD001DB530 /* AuthorModel.swift */; };
 		E9568AA52B4FAA72002A1AB0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9568AA42B4FAA72002A1AB0 /* ListViewController.swift */; };
 		E9568AA72B4FAF83002A1AB0 /* PlaceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9568AA62B4FAF83002A1AB0 /* PlaceListTableViewCell.swift */; };
 		E97C97802B4FE83A00431B2C /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C977F2B4FE83A00431B2C /* AboutUsViewController.swift */; };
@@ -25,6 +27,8 @@
 		E9A1F2C22B502C1E00C47E0A /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1F2C12B502C1E00C47E0A /* UICollectionViewExtension.swift */; };
 		E9A1F2C42B50316700C47E0A /* CardContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1F2C32B50316700C47E0A /* CardContentViewController.swift */; };
 		E9A75F3A2B4BD541005494AB /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A75F392B4BD541005494AB /* PlaceTableViewCell.swift */; };
+		E9AB571D2B51309B0077411C /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB571C2B51309B0077411C /* ContactUsViewController.swift */; };
+		E9AB571F2B513BB10077411C /* MessageFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB571E2B513BB10077411C /* MessageFormViewController.swift */; };
 		E9BE704C2B4CEC6500A03CE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE704B2B4CEC6500A03CE5 /* ProfileViewController.swift */; };
 		E9BE704E2B4D455900A03CE5 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE704D2B4D455900A03CE5 /* PlaceModel.swift */; };
 		E9C2B2882B4E5D2000647802 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C2B2872B4E5D2000647802 /* AccountViewController.swift */; };
@@ -56,6 +60,8 @@
 		E94B574B2B4E82BB00EFE9A9 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		E94B574D2B4E8BCA00EFE9A9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E94B574F2B4E94A100EFE9A9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E95253522B50CBBA001DB530 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E95253542B50DDDD001DB530 /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
 		E9568AA42B4FAA72002A1AB0 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E9568AA62B4FAF83002A1AB0 /* PlaceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListTableViewCell.swift; sourceTree = "<group>"; };
 		E97C977F2B4FE83A00431B2C /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 		E9A1F2C12B502C1E00C47E0A /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		E9A1F2C32B50316700C47E0A /* CardContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentViewController.swift; sourceTree = "<group>"; };
 		E9A75F392B4BD541005494AB /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		E9AB571C2B51309B0077411C /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		E9AB571E2B513BB10077411C /* MessageFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFormViewController.swift; sourceTree = "<group>"; };
 		E9BE704B2B4CEC6500A03CE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E9BE704D2B4D455900A03CE5 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		E9C2B2872B4E5D2000647802 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 			children = (
 				E9BE704D2B4D455900A03CE5 /* PlaceModel.swift */,
 				E944BD2C2B4EE46700767258 /* SideMenuModel.swift */,
+				E95253542B50DDDD001DB530 /* AuthorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +228,7 @@
 				E94B574F2B4E94A100EFE9A9 /* UIImageExtension.swift */,
 				E9A1F2BF2B502BD600C47E0A /* UIWindowExtension.swift */,
 				E9A1F2C12B502C1E00C47E0A /* UICollectionViewExtension.swift */,
+				E95253522B50CBBA001DB530 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +261,8 @@
 				E9568AA42B4FAA72002A1AB0 /* ListViewController.swift */,
 				E97C977F2B4FE83A00431B2C /* AboutUsViewController.swift */,
 				E9A1F2C32B50316700C47E0A /* CardContentViewController.swift */,
+				E9AB571C2B51309B0077411C /* ContactUsViewController.swift */,
+				E9AB571E2B513BB10077411C /* MessageFormViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -380,6 +392,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95253532B50CBBA001DB530 /* UIViewExtension.swift in Sources */,
+				E95253552B50DDDD001DB530 /* AuthorModel.swift in Sources */,
+				E9AB571F2B513BB10077411C /* MessageFormViewController.swift in Sources */,
 				E9D3CE372B4B8EEE0076E2E0 /* SubcateCollectionViewCell.swift in Sources */,
 				E9C2B28A2B4E728D00647802 /* DetailViewController.swift in Sources */,
 				E9D3CE4A2B4BC9A80076E2E0 /* UIFontExtension.swift in Sources */,
@@ -389,6 +404,7 @@
 				E97C97802B4FE83A00431B2C /* AboutUsViewController.swift in Sources */,
 				E9D3CE3B2B4B9B740076E2E0 /* UIColorExtension.swift in Sources */,
 				E9D3CE252B4B8C120076E2E0 /* BaseViewController.swift in Sources */,
+				E9AB571D2B51309B0077411C /* ContactUsViewController.swift in Sources */,
 				E985863F2B4BE3BD00DE7780 /* RecommendCollectionViewCell.swift in Sources */,
 				E98570802B4E2FE000BC4840 /* HomeViewController.swift in Sources */,
 				E9A1F2BE2B501E0700C47E0A /* AboutUsCollectionViewCell.swift in Sources */,

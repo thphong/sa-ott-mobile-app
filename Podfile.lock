@@ -2,19 +2,23 @@ PODS:
   - Cards (1.4.0):
     - Player (= 0.13.0)
   - Player (0.13.0)
+  - Presentr (1.9)
 
 DEPENDENCIES:
   - Cards
+  - Presentr
 
 SPEC REPOS:
   trunk:
     - Cards
     - Player
+    - Presentr
 
 SPEC CHECKSUMS:
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
+  Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
 
-PODFILE CHECKSUM: db1a5050f4825d5224813a0b5fb7ee53c41f2768
+PODFILE CHECKSUM: 480ec4d293f2efd867068776bcf1eaa82eea219c
 
 COCOAPODS: 1.14.3

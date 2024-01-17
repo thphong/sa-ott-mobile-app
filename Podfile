@@ -7,4 +7,5 @@ target 'vnlook' do
   
   # Pods for vnlook
   pod 'Cards'
+  pod 'Presentr'
 end

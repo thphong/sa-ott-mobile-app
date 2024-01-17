@@ -7,10 +7,28 @@
 
 import UIKit
 import MapKit
+import Presentr
 
 final class ContactUsViewController: UIViewController {
     private var mapView: MKMapView!
     private var btnSend: UIButton!
+    
+    let presenter: Presentr = {
+        let width = ModalSize.full
+        let height = ModalSize.fluid(percentage: 0.20)
+        let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: 0, y: 0))
+        let customType = PresentationType.custom(width: width, height: height, center: center)
+
+        let customPresenter = Presentr(presentationType: customType)
+        customPresenter.transitionType = .coverVerticalFromTop
+        customPresenter.dismissTransitionType = .crossDissolve
+        customPresenter.roundCorners = false
+        customPresenter.backgroundColor = .green
+        customPresenter.backgroundOpacity = 0.5
+        customPresenter.dismissOnSwipe = true
+        customPresenter.dismissOnSwipeDirection = .top
+        return customPresenter
+    }()
     
     override func loadView() {
         super.loadView()
@@ -68,18 +86,8 @@ final class ContactUsViewController: UIViewController {
     }
 
     @objc func actionOpen() {
-        print("Open !")
         let vc = MessageFormViewController()
-        present(vc, animated: true, completion: {
-            vc.view.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                vc.view.leadingAnchor.constraint(equalTo: self.mapView.leadingAnchor, constant: 32),
-                vc.view.trailingAnchor.constraint(equalTo: self.mapView.trailingAnchor, constant: -32),
-                vc.view.bottomAnchor.constraint(equalTo: self.btnSend.topAnchor),
-                vc.view.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1 / 2)
-            ])
-        })
+        customPresentViewController(presenter, viewController: vc, animated: true)
     }
 }
 

@@ -14,17 +14,17 @@ final class ContactUsViewController: UIViewController {
     private var btnSend: UIButton!
     
     let presenter: Presentr = {
-        let width = ModalSize.full
-        let height = ModalSize.fluid(percentage: 0.20)
-        let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: 0, y: 0))
+        let width = ModalSize.sideMargin(value: 32)
+        let height = ModalSize.fluid(percentage: 0.37)
+        let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: 32, y: 490))
         let customType = PresentationType.custom(width: width, height: height, center: center)
 
         let customPresenter = Presentr(presentationType: customType)
         customPresenter.transitionType = .coverVerticalFromTop
         customPresenter.dismissTransitionType = .crossDissolve
         customPresenter.roundCorners = false
-        customPresenter.backgroundColor = .green
-        customPresenter.backgroundOpacity = 0.5
+        // customPresenter.backgroundColor = .clear
+        // customPresenter.backgroundOpacity = 0.5
         customPresenter.dismissOnSwipe = true
         customPresenter.dismissOnSwipeDirection = .top
         return customPresenter
@@ -59,7 +59,8 @@ final class ContactUsViewController: UIViewController {
         btnSend.layer.cornerRadius = 10
         btnSend.translatesAutoresizingMaskIntoConstraints = false
         btnSend.addTarget(self, action: #selector(actionOpen), for: .touchUpInside)
-        
+        btnSend.superview?.bringSubviewToFront(btnSend)
+
         mapView.addSubview(btnSend)
         view.addSubview(mapView)
         

@@ -1,6 +1,0 @@
-framework module Pods_vnlook {
-  umbrella header "Pods-vnlook-umbrella.h"
-
-  export *
-  module * { export * }
-}

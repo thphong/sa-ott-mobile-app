@@ -1,4 +1,4 @@
-# vnlook
+# bkalo
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.softhcmits.xyz/tamnguyen/vnlook.git
+git remote add origin https://gitlab.softhcmits.xyz/tamnguyen/bkalo.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.softhcmits.xyz/tamnguyen/vnlook/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.softhcmits.xyz/tamnguyen/bkalo/-/settings/integrations)
 
 ## Collaborate with your team
 

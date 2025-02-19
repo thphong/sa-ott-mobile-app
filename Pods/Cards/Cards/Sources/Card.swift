@@ -113,7 +113,6 @@ import UIKit
             detailVC.delegate = self.delegate
             detailVC.isFullscreen = fullscreen
         }
-        detailVC.modalPresentationStyle = .fullScreen
     }
     /**
      If the card should display parallax effect.

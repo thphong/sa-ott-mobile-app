@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseViewController.swift
 //  bkalo
 //
 //  Created by Nguyễn Minh Tâm on 08/01/2024.
@@ -25,12 +25,20 @@ class BaseViewController: UIViewController {
             UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(profileAction)),
             UIBarButtonItem(image: UIImage(systemName: "qrcode.viewfinder"), style: .plain, target: self, action: #selector(notifyAction))
         ]
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .cornFlowerBlue
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(hexString: "#4396F4")
+        self.navigationController?.navigationBar.barTintColor = .cornFlowerBlue
+    }
+    
+    deinit {
+        navigationController?.navigationBar.delegate = nil
     }
     
     @objc private func profileAction() {
@@ -52,3 +60,4 @@ extension BaseViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
 }
+

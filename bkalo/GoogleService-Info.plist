@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>302851613646-okh63apl0t384nbp11qvvmn24fd7n87d.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.302851613646-okh63apl0t384nbp11qvvmn24fd7n87d</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCJlW2_naLiRb37Qw2Kg8CFgXzsf3XDkk0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>302851613646</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tamnguyen.bkalo</string>
+	<key>PROJECT_ID</key>
+	<string>bkalo-auth</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bkalo-auth.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:302851613646:ios:f1c0b61cd5850f8212c19f</string>
+</dict>
+</plist>

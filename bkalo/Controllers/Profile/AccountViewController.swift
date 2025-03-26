@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class AccountViewController: BaseViewController {
     
-    private var topView: UIView!
     private var tableView: UITableView!
+    private var btnLogout: UIButton!
     
     // ------------ MOCK DATA ------------
     private var mockDataLst = [
@@ -27,10 +28,6 @@ final class AccountViewController: BaseViewController {
             UIBarButtonItem()
         ]
         
-        topView = UIView()
-        topView.backgroundColor = UIColor(hexString: "#4396F4")
-        topView.translatesAutoresizingMaskIntoConstraints = false
-        
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,30 +36,50 @@ final class AccountViewController: BaseViewController {
         tableView.register(AccountSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: String(describing: AccountSectionHeaderView.self))
         tableView.register(AccountTableViewCell.self, forCellReuseIdentifier: String(describing: AccountTableViewCell.self))
         
-        view.addSubview(topView)
+        let logoutTitle = "Đăng xuất"
+        let logoutAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
+        let logoutString = NSMutableAttributedString(string: logoutTitle, attributes: logoutAttrs as [NSAttributedString.Key : Any])
+        
+        btnLogout = UIButton(type: .system)
+        btnLogout.backgroundColor = .gray
+        btnLogout.setAttributedTitle(logoutString, for: .normal)
+        btnLogout.layer.cornerRadius = 10
+        btnLogout.translatesAutoresizingMaskIntoConstraints = false
+        btnLogout.addTarget(self, action: #selector(actionLogout), for: .touchUpInside)
+        
         view.addSubview(tableView)
+        view.addSubview(btnLogout)
         
         NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: view.topAnchor),
-            topView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 3 / 25),
-            
-            tableView.topAnchor.constraint(equalTo: topView.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: btnLogout.topAnchor, constant: -8),
+            
+            btnLogout.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            btnLogout.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            btnLogout.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            btnLogout.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(hexString: "#F2F5F7")
+        view.backgroundColor = .iceBlue
     }
 
     @objc private func settingAction() {
 
+    }
+    
+    @objc private func actionLogout() {
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
     }
 }
 

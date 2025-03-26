@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 private var messageViewController: MessageViewController = {
     let tabBarItem = UITabBarItem()
@@ -14,6 +15,17 @@ private var messageViewController: MessageViewController = {
     tabBarItem.selectedImage = UIImage(systemName: "ellipsis.message.fill")
     
     let viewController = MessageViewController()
+    viewController.tabBarItem = tabBarItem
+    return viewController
+}()
+
+private var contactViewController: ContactViewController = {
+    let tabBarItem = UITabBarItem()
+    tabBarItem.title = "Danh bạ"
+    tabBarItem.image = UIImage(systemName: "person.crop.square")
+    tabBarItem.selectedImage = UIImage(systemName: "person.crop.square.fill")
+    
+    let viewController = ContactViewController()
     viewController.tabBarItem = tabBarItem
     return viewController
 }()
@@ -32,8 +44,12 @@ private var accountViewController: AccountViewController = {
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var isLoggedIn: Bool = false
 
-
+    static var sharedInstance: SceneDelegate? {
+        return UIApplication.shared.connectedScenes.first(where: { $0 is UIWindowScene }).flatMap({ $0.delegate as? SceneDelegate })
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -44,16 +60,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         UIBarButtonItem.appearance().tintColor = .white
         
-        let tabbarController = UITabBarController()
-        tabbarController.delegate = self
-        tabbarController.viewControllers = [
-            UINavigationController(rootViewController: messageViewController),
-            UINavigationController(rootViewController: accountViewController)
-        ]
-        tabbarController.tabBar.tintColor = UIColor(hexString: "#2196f3")
-        tabbarController.tabBar.backgroundColor = UIColor(hexString: "#FEFEFE")
-
-        window.rootViewController = tabbarController
+        isLoggedIn = !(Auth.auth().currentUser == nil)
+        
+        if isLoggedIn {
+            window.rootViewController = createMainTabBarController()
+        } else {
+            window.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
+        }
         
         self.window = window
         window.makeKeyAndVisible()
@@ -93,5 +106,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected Tab : \(tabBarController.selectedIndex)")
+    }
+}
+
+extension SceneDelegate {
+    func setRootLoginVC() {
+        self.window?.clearAllRootVC()
+        self.window?.rootViewController = LoginViewController()
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func switchToMainTabBar() {
+        guard let window = self.window else { return }
+        
+        isLoggedIn = true
+        window.rootViewController = createMainTabBarController()
+        window.makeKeyAndVisible()
+    }
+
+    private func createMainTabBarController() -> UITabBarController {
+        let tabBarController = UITabBarController()
+        tabBarController.delegate = self
+        tabBarController.viewControllers = [
+            UINavigationController(rootViewController: messageViewController),
+            UINavigationController(rootViewController: contactViewController),
+            UINavigationController(rootViewController: accountViewController)
+        ]
+        tabBarController.tabBar.tintColor = .dodgerBlue
+        tabBarController.view.backgroundColor = .clear
+        tabBarController.tabBar.backgroundColor = .nearWhite
+        
+        return tabBarController
     }
 }

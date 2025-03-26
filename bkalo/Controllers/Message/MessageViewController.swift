@@ -10,15 +10,11 @@ import SwipeCellKit
 
 final class MessageViewController: BaseViewController {
     
-    private var topView: UIView!
     private var tableView: UITableView!
+    private var chatVC = ChatViewController()
     
     override func loadView() {
         super.loadView()
-        
-        topView = UIView()
-        topView.backgroundColor = UIColor(hexString: "#4396F4")
-        topView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self
@@ -28,16 +24,10 @@ final class MessageViewController: BaseViewController {
         tableView.register(MessageSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: String(describing: MessageSectionHeaderView.self))
         tableView.register(MessageTableViewCell.self, forCellReuseIdentifier: String(describing: MessageTableViewCell.self))
         
-        view.addSubview(topView)
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            topView.topAnchor.constraint(equalTo: view.topAnchor),
-            topView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 3 / 25),
-            
-            tableView.topAnchor.constraint(equalTo: topView.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
@@ -47,7 +37,7 @@ final class MessageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(hexString: "#F2F5F7")
+        view.backgroundColor = .lightGrayishBlue
     }
 }
 
@@ -81,6 +71,10 @@ extension MessageViewController: UITableViewDataSource {
         cell.setData()
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        present(chatVC, animated: true)
+    }
 }
 
 extension MessageViewController: SwipeTableViewCellDelegate {
@@ -96,13 +90,13 @@ extension MessageViewController: SwipeTableViewCellDelegate {
             
         }
         moreAction.image = UIImage(systemName: "ellipsis")
-        moreAction.backgroundColor = UIColor(hexString: "#ccd1d6")
+        moreAction.backgroundColor = .lightSlateGray
         
         let unreadAction = SwipeAction(style: .destructive, title: "Chưa đọc") { action, indexPath in
             
         }
         unreadAction.image = UIImage(systemName: "message.badge.filled.fill")
-        unreadAction.backgroundColor = UIColor(hexString: "#3B86F7")
+        unreadAction.backgroundColor = .brightAzure
         
         return [unreadAction, deleteAction, moreAction]
     }

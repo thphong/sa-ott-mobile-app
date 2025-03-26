@@ -8,4 +8,5 @@ target 'bkalo' do
   # Pods for bkalo
   pod 'Cards'
   pod 'Presentr'
+  pod 'OTPFieldView'
 end

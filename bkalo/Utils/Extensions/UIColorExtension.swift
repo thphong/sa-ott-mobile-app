@@ -50,3 +50,31 @@ extension UIColor {
     }
 }
 
+extension UIColor {
+    static let royalBlue: UIColor = UIColor(hexString: "#2057C8")!
+    static let brightRoyalBlue: UIColor = UIColor(hexString: "#2F68F7")!
+    static let appleBlue: UIColor = UIColor(hexString: "#007AFF")!
+    static let cornFlowerBlue: UIColor = UIColor(hexString: "#4396F4")!
+    static let dodgerBlue: UIColor = UIColor(hexString: "#2196f3")!
+    static let lightGrayishBlue: UIColor = UIColor(hexString: "#F2F5F7")!
+    static let brightAzure: UIColor = UIColor(hexString: "#3B86F7")!
+    static let azureBlue: UIColor = UIColor(hexString: "#275DE1")!
+    static let iceBlue: UIColor = UIColor(hexString: "#F2F5F7")!
+    
+    static let athensGray: UIColor = UIColor(hexString: "#E9EDF0")!
+    static let platinumGray: UIColor = UIColor(hexString: "#E4E4E4")!
+    static let dimGray: UIColor = UIColor(hexString: "#6C6C6C")!
+    static let midGray: UIColor = UIColor(hexString: "#8E8E8E")!
+    static let lightSlateGray: UIColor = UIColor(hexString: "#CCD1D6")!
+    static let lightGray: UIColor = UIColor(hexString: "#DEDEDE")!
+    static let titanium: UIColor = UIColor(hexString: "#96999B")!
+    static let mediumGray: UIColor = UIColor(hexString: "#878787")!
+    static let darkGray: UIColor = UIColor(hexString: "#727272")!
+    static let grayNickel: UIColor = UIColor(hexString: "#989898")!
+    
+    static let nearWhite: UIColor = UIColor(hexString: "#FEFEFE")!
+    
+    static let charcoalBrown: UIColor = UIColor(hexString: "#635D5C")!
+    
+    static let coralRed: UIColor = UIColor(hexString: "#F75B55")!
+}

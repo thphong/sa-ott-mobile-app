@@ -35,7 +35,7 @@ final class AccountTableViewCell: UITableViewCell {
         
         btnMore = UIButton(type: .system)
         btnMore.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-        btnMore.tintColor = UIColor(hexString: "#989898")
+        btnMore.tintColor = .grayNickel
         btnMore.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(imgIcon)
@@ -60,7 +60,7 @@ final class AccountTableViewCell: UITableViewCell {
     }
     
     func setData(_ data: AccountItemModel) {
-        self.imgIcon.image = UIImage(systemName: data.icon)?.withTintColor(UIColor(hexString: "#275DE1")!, renderingMode: .alwaysOriginal)
+        self.imgIcon.image = UIImage(systemName: data.icon)?.withTintColor(.azureBlue, renderingMode: .alwaysOriginal)
         self.lblTitle.text = data.title
         self.btnMore.isHidden = !data.isMore
     }

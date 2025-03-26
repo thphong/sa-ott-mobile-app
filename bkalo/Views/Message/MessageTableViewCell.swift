@@ -41,7 +41,7 @@ final class MessageTableViewCell: SwipeTableViewCell {
         
         lblTime = UILabel()
         lblTime.font = .interRegular(12)
-        lblTime.textColor = UIColor(hexString: "#96999B")
+        lblTime.textColor = .titanium
         lblTime.translatesAutoresizingMaskIntoConstraints = false
         
         let topSubView = UIView()
@@ -52,7 +52,7 @@ final class MessageTableViewCell: SwipeTableViewCell {
         
         lblMessage = UILabel()
         lblMessage.font = .interRegular(14)
-        lblMessage.textColor = UIColor(hexString: "#96999B")
+        lblMessage.textColor = .titanium
         lblMessage.translatesAutoresizingMaskIntoConstraints = false
         
         lblUnreadCount = UILabel()
@@ -62,7 +62,7 @@ final class MessageTableViewCell: SwipeTableViewCell {
         
         redUnreadView = UIView()
         redUnreadView.layer.cornerRadius = 10
-        redUnreadView.backgroundColor = UIColor(hexString: "#F75B55")
+        redUnreadView.backgroundColor = .coralRed
         redUnreadView.translatesAutoresizingMaskIntoConstraints = false
         
         redUnreadView.addSubview(lblUnreadCount)

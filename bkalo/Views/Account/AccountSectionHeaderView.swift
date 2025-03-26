@@ -41,7 +41,7 @@ final class AccountSectionHeaderView: UITableViewHeaderFooterView {
         
         lblInfo = UILabel()
         lblInfo.font = .interRegular(13)
-        lblInfo.textColor = UIColor(hexString: "#727272")
+        lblInfo.textColor = .darkGray
         lblInfo.translatesAutoresizingMaskIntoConstraints = false
         
         stackView = UIStackView(arrangedSubviews: [lblName, lblInfo])
@@ -52,7 +52,7 @@ final class AccountSectionHeaderView: UITableViewHeaderFooterView {
         
         btnSwitch = UIButton(type: .system)
         btnSwitch.setImage(UIImage(systemName: "arrow.triangle.2.circlepath"), for: .normal)
-        btnSwitch.tintColor = UIColor(hexString: "#275DE1")
+        btnSwitch.tintColor = .azureBlue
         btnSwitch.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(imgAvatar)

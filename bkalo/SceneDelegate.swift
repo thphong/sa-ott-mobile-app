@@ -21,7 +21,7 @@ private var messageViewController: MessageViewController = {
 
 private var contactViewController: ContactViewController = {
     let tabBarItem = UITabBarItem()
-    tabBarItem.title = "Danh bạ"
+    tabBarItem.title = "Contact"
     tabBarItem.image = UIImage(systemName: "person.crop.square")
     tabBarItem.selectedImage = UIImage(systemName: "person.crop.square.fill")
     
@@ -32,7 +32,7 @@ private var contactViewController: ContactViewController = {
 
 private var accountViewController: AccountViewController = {
     let tabBarItem = UITabBarItem()
-    tabBarItem.title = "Cá nhân"
+    tabBarItem.title = "User"
     tabBarItem.image = UIImage(systemName: "person")
     tabBarItem.selectedImage = UIImage(systemName: "person.fill")
     
@@ -112,7 +112,7 @@ extension SceneDelegate: UITabBarControllerDelegate {
 extension SceneDelegate {
     func setRootLoginVC() {
         self.window?.clearAllRootVC()
-        self.window?.rootViewController = LoginViewController()
+        self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         self.window?.makeKeyAndVisible()
     }
     
@@ -128,9 +128,9 @@ extension SceneDelegate {
         let tabBarController = UITabBarController()
         tabBarController.delegate = self
         tabBarController.viewControllers = [
-            UINavigationController(rootViewController: messageViewController),
-            UINavigationController(rootViewController: contactViewController),
-            UINavigationController(rootViewController: accountViewController)
+            // NavigationController(rootViewController: messageViewController),
+            NavigationController(rootViewController: contactViewController),
+            NavigationController(rootViewController: accountViewController)
         ]
         tabBarController.tabBar.tintColor = .dodgerBlue
         tabBarController.view.backgroundColor = .clear

@@ -22,13 +22,13 @@ final class LoginViewController: UIViewController {
         super.loadView()
         
         lblTitle = UILabel()
-        lblTitle.text = "Đăng nhập"
+        lblTitle.text = "Login"
         lblTitle.textColor = .appleBlue
         lblTitle.font = .interBold(24)
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
         
         lblPhoneNumber = UILabel()
-        lblPhoneNumber.text = "Số điện thoại"
+        lblPhoneNumber.text = "Phone number"
         lblPhoneNumber.textColor = .black
         lblPhoneNumber.font = .interMedium(16)
         lblPhoneNumber.translatesAutoresizingMaskIntoConstraints = false
@@ -37,13 +37,14 @@ final class LoginViewController: UIViewController {
         tfPhoneNumber.delegate = self
         tfPhoneNumber.font = .interRegular(16)
         tfPhoneNumber.backgroundColor = .platinumGray
-        tfPhoneNumber.attributedPlaceholder = createPlaceholderAttributedString("Nhập số điện thoại")
+        tfPhoneNumber.attributedPlaceholder = createPlaceholderAttributedString("Enter phone number")
         tfPhoneNumber.layer.cornerRadius = 10
         tfPhoneNumber.layer.masksToBounds = true
+        tfPhoneNumber.returnKeyType = .next
         tfPhoneNumber.translatesAutoresizingMaskIntoConstraints = false
         
         lblPassword = UILabel()
-        lblPassword.text = "Mật khẩu"
+        lblPassword.text = "Password"
         lblPassword.textColor = .black
         lblPassword.font = .interMedium(16)
         lblPassword.translatesAutoresizingMaskIntoConstraints = false
@@ -52,12 +53,13 @@ final class LoginViewController: UIViewController {
         tfPassword.delegate = self
         tfPassword.font = .interRegular(16)
         tfPassword.backgroundColor = .platinumGray
-        tfPassword.attributedPlaceholder = createPlaceholderAttributedString("Nhập mật khẩu")
+        tfPassword.attributedPlaceholder = createPlaceholderAttributedString("Enter password")
         tfPassword.layer.cornerRadius = 10
         tfPassword.layer.masksToBounds = true
+        tfPassword.returnKeyType = .done
         tfPassword.translatesAutoresizingMaskIntoConstraints = false
         
-        let loginTitle = "Đăng nhập"
+        let loginTitle = "Login"
         let loginAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
         let loginString = NSMutableAttributedString(string: loginTitle, attributes: loginAttrs as [NSAttributedString.Key : Any])
         
@@ -69,7 +71,7 @@ final class LoginViewController: UIViewController {
         btnLogin.addTarget(self, action: #selector(actionLogin), for: .touchUpInside)
         
         lblForgot = UILabel()
-        lblForgot.text = "Quên mật khẩu?"
+        lblForgot.text = "Forgot password?"
         lblForgot.textColor = .gray
         lblForgot.font = .interRegular(16)
         lblForgot.translatesAutoresizingMaskIntoConstraints = false
@@ -144,7 +146,9 @@ final class LoginViewController: UIViewController {
     }
 
     @objc private func actionLogin() {
-        SceneDelegate.sharedInstance?.switchToMainTabBar()
+        print("Phone number: \(tfPhoneNumber.text ?? "")")
+        print("Password: \(tfPassword.text ?? "")")
+        startAuthen()
     }
     
     @objc private func tapNoAccountLabel() {
@@ -162,6 +166,16 @@ extension LoginViewController: UITextFieldDelegate {
         textField.layer.borderColor = nil
         textField.layer.borderWidth = 0
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == tfPassword {
+            textField.resignFirstResponder()
+            actionLogin()
+        } else if textField == tfPhoneNumber {
+            tfPassword.becomeFirstResponder()
+        }
+        return true
+    }
 }
 
 extension LoginViewController {
@@ -173,16 +187,31 @@ extension LoginViewController {
     }
     
     private func createNoAccountAttributedString() -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: "Chưa có tài khoản? ", attributes: [
+        let attributedString = NSMutableAttributedString(string: "Don't have account? ", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.midGray,
             NSAttributedString.Key.font: UIFont.interMedium(16)
         ])
         
-        attributedString.append(NSAttributedString(string: "Đăng ký ngay", attributes: [
+        attributedString.append(NSAttributedString(string: "Register now", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.appleBlue,
             NSAttributedString.Key.font: UIFont.interMedium(16)
         ]))
         
         return attributedString
+    }
+    
+    private func startAuthen() {
+        guard let phone = tfPhoneNumber.text, let pwd = tfPassword.text, !phone.isEmpty, !pwd.isEmpty else {
+            return
+        }
+        
+        AuthenManager.shared.startLoginAuthen(phoneNumber: phone, password: pwd) { success, message in
+            if success {
+                print("Login successful!")
+                SceneDelegate.sharedInstance?.switchToMainTabBar()
+            } else {
+                print("Login failed: \(message ?? "Unknown error")")
+            }
+        }
     }
 }

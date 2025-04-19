@@ -20,7 +20,7 @@ final class WelcomeViewController: UIViewController {
         imgView.contentMode = .scaleAspectFill
         imgView.translatesAutoresizingMaskIntoConstraints = false
         
-        let loginTitle = "Đăng nhập"
+        let loginTitle = "Login"
         let loginAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
         let loginString = NSMutableAttributedString(string: loginTitle, attributes: loginAttrs as [NSAttributedString.Key : Any])
         
@@ -31,7 +31,7 @@ final class WelcomeViewController: UIViewController {
         btnLogin.translatesAutoresizingMaskIntoConstraints = false
         btnLogin.addTarget(self, action: #selector(actionLogin), for: .touchUpInside)
         
-        let registerTitle = "Tạo tài khoản mới"
+        let registerTitle = "Create new account"
         let registerAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.black]
         let registerString = NSMutableAttributedString(string: registerTitle, attributes: registerAttrs as [NSAttributedString.Key : Any])
         

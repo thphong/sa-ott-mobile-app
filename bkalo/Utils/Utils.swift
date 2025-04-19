@@ -40,4 +40,22 @@ final class Utils {
             }
         }
     }
+    
+    static func showErrorDialog(title: String = "Error", message: String = "Error occurred. Please try again!") {
+        guard let topVC = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController else {
+            return
+        }
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+        // Present on topmost view controller
+        var presentedVC = topVC
+        while let next = presentedVC.presentedViewController {
+            presentedVC = next
+        }
+
+        presentedVC.present(alert, animated: true, completion: nil)
+    }
+
 }

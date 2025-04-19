@@ -12,12 +12,13 @@ final class AccountViewController: BaseViewController {
     
     private var tableView: UITableView!
     private var btnLogout: UIButton!
+    private var userData: UserModel?
     
     // ------------ MOCK DATA ------------
     private var mockDataLst = [
-        AccountItemModel(icon: "cloud", title: "Cloud của tôi", isMore: true),
-        AccountItemModel(icon: "staroflife.shield", title: "Tài khoản và bảo mật", isMore: true),
-        AccountItemModel(icon: "exclamationmark.lock", title: "Quyền riêng tư", isMore: true)
+        AccountItemModel(icon: "cloud", title: "My Cloud", isMore: true, actionType: .cloud),
+        AccountItemModel(icon: "staroflife.shield", title: "Account and Security", isMore: true, actionType: .security),
+        AccountItemModel(icon: "exclamationmark.lock", title: "Privacy", isMore: true, actionType: .privacy)
     ]
     
     override func loadView() {
@@ -36,7 +37,7 @@ final class AccountViewController: BaseViewController {
         tableView.register(AccountSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: String(describing: AccountSectionHeaderView.self))
         tableView.register(AccountTableViewCell.self, forCellReuseIdentifier: String(describing: AccountTableViewCell.self))
         
-        let logoutTitle = "Đăng xuất"
+        let logoutTitle = "Log out"
         let logoutAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
         let logoutString = NSMutableAttributedString(string: logoutTitle, attributes: logoutAttrs as [NSAttributedString.Key : Any])
         
@@ -68,6 +69,16 @@ final class AccountViewController: BaseViewController {
         
         view.backgroundColor = .iceBlue
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UserService.shared.getCurrentInfo { success, userData in
+            if success {
+                self.userData = userData
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     @objc private func settingAction() {
 
@@ -76,10 +87,20 @@ final class AccountViewController: BaseViewController {
     @objc private func actionLogout() {
         let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
+            AuthenManager.clearAuthModel()
+            AuthenManager.shared.logoutApp { success in
+                guard success else { return }
+                SceneDelegate.sharedInstance?.setRootLoginVC()
+            }
         } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
+    }
+    
+    @objc private func didTapHeader() {
+        let updateVC = ProfileViewController()
+        navigationController?.pushViewController(updateVC, animated: true)
     }
 }
 
@@ -94,7 +115,15 @@ extension AccountViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: AccountSectionHeaderView.self)) as! AccountSectionHeaderView
-        header.setData()
+        
+        if let userData = self.userData {
+            header.setData(userData)
+        }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapHeader))
+        header.addGestureRecognizer(tapGesture)
+        header.isUserInteractionEnabled = true
+        
         return header
     }
 }
@@ -112,5 +141,19 @@ extension AccountViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AccountTableViewCell.self), for: indexPath) as! AccountTableViewCell
         cell.setData(mockDataLst[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedItem = mockDataLst[indexPath.row]
+        
+        switch selectedItem.actionType {
+        case .cloud:
+            showComingSoonAlert(for: "My Cloud")
+        case .security:
+            showComingSoonAlert(for: "Account and Security")
+        case .privacy:
+            showComingSoonAlert(for: "Privacy")
+        }
     }
 }

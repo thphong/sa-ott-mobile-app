@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import OTPFieldView
 
 final class LoginOTPViewController: UIViewController {
     private var lblTitle: UILabel!
@@ -18,7 +17,7 @@ final class LoginOTPViewController: UIViewController {
         super.loadView()
         
         lblTitle = UILabel()
-        lblTitle.text = "Mã xác nhận"
+        lblTitle.text = "Confirmation code"
         lblTitle.textColor = .appleBlue
         lblTitle.font = .interBold(24)
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +34,7 @@ final class LoginOTPViewController: UIViewController {
         otpView.separatorSpace = 8
         otpView.translatesAutoresizingMaskIntoConstraints = false
         
-        let confirmTitle = "Xác nhận"
+        let confirmTitle = "Confirm"
         let confirmAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
         let confirmString = NSMutableAttributedString(string: confirmTitle, attributes: confirmAttrs as [NSAttributedString.Key : Any])
         

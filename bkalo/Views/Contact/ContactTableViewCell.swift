@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ContactTableViewCell: UITableViewCell {
     
@@ -36,11 +37,13 @@ final class ContactTableViewCell: UITableViewCell {
         lblName.translatesAutoresizingMaskIntoConstraints = false
         
         imgPhone = UIImageView()
+        imgPhone.isHidden = true // MARK: Coming soon
         imgPhone.image = UIImage(systemName: "phone")?.withTintColor(.mediumGray)
         imgPhone.contentMode = .scaleAspectFill
         imgPhone.translatesAutoresizingMaskIntoConstraints = false
         
         imgVideo = UIImageView()
+        imgVideo.isHidden = true // MARK: Coming soon
         imgVideo.image = UIImage(systemName: "video")?.withTintColor(.mediumGray)
         imgVideo.contentMode = .scaleAspectFill
         imgVideo.translatesAutoresizingMaskIntoConstraints = false
@@ -71,8 +74,12 @@ final class ContactTableViewCell: UITableViewCell {
         ])
     }
     
-    func setData() {
-        self.imgAvatar.image = UIImage(named: "avatar_trump")?.withRenderingMode(.alwaysOriginal)
-        self.lblName.text = "Donald Trump"
+    func setData(_ data: ChatPartner) {
+        if let url = data.fullAvatarURL, let avatarURL = data.avatarURL, !avatarURL.isEmpty {
+            self.imgAvatar.kf.setImage(with: url)
+        } else {
+            self.imgAvatar.image = UIImage(systemName: "person.circle.fill")
+        }
+        self.lblName.text = data.name
     }
 }

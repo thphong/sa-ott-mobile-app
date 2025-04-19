@@ -7,10 +7,17 @@
 
 import UIKit
 
+enum AccountItemActionType {
+    case cloud
+    case security
+    case privacy
+}
+
 final class AccountItemModel {
     private var _icon: String
     private var _title: String
     private var _isMore: Bool
+    private var _actionType: AccountItemActionType
     
     var icon: String {
         get { return _icon }
@@ -27,10 +34,15 @@ final class AccountItemModel {
         set { _isMore = newValue }
     }
     
-    init(icon: String, title: String, isMore: Bool) {
+    var actionType: AccountItemActionType {
+        get { return _actionType }
+        set { _actionType = newValue }
+    }
+    
+    init(icon: String, title: String, isMore: Bool, actionType: AccountItemActionType) {
         self._icon = icon
         self._title = title
         self._isMore = isMore
+        self._actionType = actionType
     }
 }
-

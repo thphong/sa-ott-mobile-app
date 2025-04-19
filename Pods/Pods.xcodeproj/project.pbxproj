@@ -7,577 +7,125 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D417B6BE23C569B32F7D2F4E0D3242C /* PresentrShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369D98FC16E6AA24391752E93DE555F /* PresentrShadow.swift */; };
-		109699E10AE9993D81216C27343B7B94 /* CardHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB6698873F037E5444C48C31E45023 /* CardHighlight.swift */; };
-		109783097B549F7381F023E672A136D2 /* Pods-bkalo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 579840D2C65D2B07F07F9AEA80805910 /* Pods-bkalo-dummy.m */; };
-		134F6BB89F7E3621ACF8421FEF002199 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F5ADD455EE417E7102525D416C80A63 /* Montserrat-Regular.ttf */; };
-		14C9966C75A38B295E40C4625340F6FF /* KeyboardTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDCBC7248C9BE141DE04E5D49C73324 /* KeyboardTranslation.swift */; };
-		19566CED5C43AB99F059D9DA194B80A7 /* OTPFieldView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A30781E73B39A26B448F05435B0F45 /* OTPFieldView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A26DD2353C377D09DF3B47041ED4801 /* Presentr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABB0D4FAF7A53920FC986935A8A5EE0 /* Presentr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B7A99D34BE50B5925C5D1208D16EB75 /* CardArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A97DC46FFC3BE8B6EA6FC8A041980 /* CardArticle.swift */; };
-		201F09778D6719F515BC30136306EF36 /* TransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1416DBFAE29AAC8FA946DCE54E2A68A /* TransitionType.swift */; };
-		207593290C5587481C4905DBF87AF657 /* Presentr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578C31705510FD531130C7761DC3515 /* Presentr-dummy.m */; };
-		209664C2519AAAE32476A649A73BCC14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		20A4D1C3509DBEC8D32AECEEB6C39B7F /* Presentr+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B03DD1792E4394268159082130CE54 /* Presentr+Equatable.swift */; };
-		36CB921C76402CF96E65451E5BF7CA8E /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79151EE3FBC16402BF3406969934F414 /* LayoutHelper.swift */; };
-		3943A2EA9465506E40527C423456F82B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		3B14DC00D0297FD357C1796B878B3DB5 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2EFD2A1FB8FC0322D6751B47775338 /* BackgroundView.swift */; };
-		41EDE7930AEB212A96EF262F324A4063 /* CoverFromCornerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D9A587323B176EDDA3250F6B0AC3A2 /* CoverFromCornerAnimation.swift */; };
-		4C5643AE8277B6CF56F41D544B509BD3 /* PresentrAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F59BDF501D70AE0E3D77BA47AE730 /* PresentrAnimation.swift */; };
-		5726F1818BC9A249CCE02C1615CC3B0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		5AE7C14FFF09112BCD4611622CB4A9CD /* CardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE77A6BC208EE112EEA668E95F3E67D /* CardGroup.swift */; };
-		5B55F03FF09EABA9EF8CEBB43C472114 /* CoverVerticalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC68CE4F86C11D624E66266ADBE5130 /* CoverVerticalAnimation.swift */; };
-		650C4F0B783A316DB22D0776E7B03367 /* CoverHorizontalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671ECF70BA30A7CBB9C085E026AD482A /* CoverHorizontalAnimation.swift */; };
-		66154092C596A9A1437F9756B30EFDFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19FCF5B3359812B4A859ED4E69AB2DF /* DetailViewController.swift */; };
-		706F2D6FBE07204D5F62C2F24B007BBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		71AB939A92664F8F6E0BCAFE11E836A0 /* Cards-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DED9CE5AC75D9E5ABE9BAAC83AEF859 /* Cards-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72FBB102D1C21F9E63A0383DFE3BA755 /* CardGroupSliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E5E6A0A8BE8A465EC622E8F6AD0522 /* CardGroupSliding.swift */; };
-		778D379DA472B7960C3AD5793AC46BE0 /* OTPFieldView.h in Headers */ = {isa = PBXBuildFile; fileRef = CA1513492F7B676D16C7D3FC9A45CF82 /* OTPFieldView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D8C9B26847D227148BCDBFB2050D328 /* FlipHorizontalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8854815B3B9C8476A9F0DAF9B5511D /* FlipHorizontalAnimation.swift */; };
-		821FF06D50C71EB0855DF01BBB9FD0CE /* ModalSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A82364082445A0EC506AB082ECA6F /* ModalSize.swift */; };
-		881020A4719D8237DC571C8DF1434137 /* Pods-bkalo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B821153487C901DB091B1B8D9ED940D /* Pods-bkalo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CFC635509ACFEC7FCEC7127553F6A05 /* ModalCenterPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81036E19CFD64F97C751F8A83F07CB0E /* ModalCenterPosition.swift */; };
-		9367926ED3B3C27D916EFEEB677E7E96 /* CoverVerticalFromTopAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B250A1F9C812DF391D06F4C082F9A /* CoverVerticalFromTopAnimation.swift */; };
-		9713D0CFFE57995AD3B2C1A5EC655BAE /* CrossDissolveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811A2411893D818FF9248DC539C3873B /* CrossDissolveAnimation.swift */; };
-		9DB4CBDFE92F4E8ED8DEF17B0D55548B /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF259A69B7177FF128EDCF8ACD8E59 /* OTPTextField.swift */; };
-		A60AE45490BFB435DFE76393A09D4400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		ADEBF21E113FDABB1094F748C4278A3F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDDDCD12D273AA494B9B9A971B262FC /* AlertViewController.swift */; };
-		AE3A3FF9A48A17875E549C5C3DC3FC1B /* OTPFieldView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8250477FB59BCFC905896E2292DFC679 /* OTPFieldView-dummy.m */; };
-		AE7A37125A4E80305D09F0D64965EAD2 /* Presentr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7359D0C4B69F94E96030BAA1F38E0 /* Presentr.swift */; };
-		B5247E1C5DBC657E0D72C92BF12B160F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C6C344DC6E6A8E41DD32345DB89B1 /* Player.swift */; };
-		BF5C187D8C85AB3548B6EA7CE4B3B032 /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFEA4325C5C52E374D74C61544C2929 /* OTPFieldView.swift */; };
-		D1F664D5B7FE2FEA354879E78EA92AF4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C940F61C3A7A6B4338ACF224C837F5 /* Card.swift */; };
-		D30EB7E7DCEA60F3C63C44DB07BE1F51 /* Cards-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74248FE310FC158A451DB8FC66B62320 /* Cards-dummy.m */; };
-		DEE1462383DC4D8431B3808D9FD0EE06 /* PresentationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD915B7371E82F7E809F2EE21895E7E5 /* PresentationType.swift */; };
-		DF4DE12A14E1D76238B909267A3185B7 /* Player-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 638C2C19AB0F8A1764CF1130EB56CEE0 /* Player-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFEC6DEC7344B137EBF55E058EF50CBA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC65EF34DB39A10EC67FE8D97682DB /* Animator.swift */; };
-		E1381CA5CCF65B3100CF072F175DD4DC /* CardPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127FF24C324E744EC95904C20CAF9F6 /* CardPlayer.swift */; };
-		E176D1526FCA0696D58D504B0027A8BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		EE7F2A26904142D64195B6B7AF27AB18 /* Player-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C719535F920E61215628DA70AA72 /* Player-dummy.m */; };
-		F2F50798C6672057582544FD912F00B0 /* PresentrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A198290D5372A22B200B4C971A6EA5D /* PresentrController.swift */; };
-		F5D6FF671B6B460B0D1E4088090EEC93 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A441065582B1D13EF69273960888FA /* AlertViewController.xib */; };
-		FA427B99A386B0665D4F6FF63668A9AA /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D64B3307C6A4C72ED559A9F3EAC4301D /* SourceSansPro-Regular.ttf */; };
+		2C61BAA4A617F013DD10ECAC7AD56A68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		96A4AE5C130329EDE8B4A608691FF397 /* Pods-bkalo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A7A6413A2534FE4DFB312B3F880B2DF /* Pods-bkalo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97DDE60BAF34B0E6B3BB62ADC2B5009 /* Pods-bkalo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D79A392B45847B1D97B6919403AF39 /* Pods-bkalo-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1BE0B29D780266CFBC9B68B0D262E6A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3566CE7721250363BAE931141A0703B1;
-			remoteInfo = Player;
-		};
-		24630125932ACA2E27039AB5FC0EF477 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 95686D88267B7D426C897EA9E91FC217;
-			remoteInfo = Cards;
-		};
-		3B560FE200695FD73544F65538E2EBE3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3566CE7721250363BAE931141A0703B1;
-			remoteInfo = Player;
-		};
-		8C404DF2C37973CB7125170F2BACC307 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BFA50DA07196AD4DB6512C559850F45;
-			remoteInfo = OTPFieldView;
-		};
-		E96EBC9FF6695DE6560CF844F93FC17B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 433F79D5F3953F8EA8E7B0C7A2A27D32;
-			remoteInfo = Presentr;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		01A30781E73B39A26B448F05435B0F45 /* OTPFieldView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTPFieldView-umbrella.h"; sourceTree = "<group>"; };
-		0A198290D5372A22B200B4C971A6EA5D /* PresentrController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentrController.swift; path = Presentr/PresentrController.swift; sourceTree = "<group>"; };
-		0E6548FA82680E2CBB485D3577892A88 /* Player-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Player-prefix.pch"; sourceTree = "<group>"; };
-		0EE77A6BC208EE112EEA668E95F3E67D /* CardGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardGroup.swift; path = Cards/Sources/CardGroup.swift; sourceTree = "<group>"; };
-		1021636B6998DFD6DAF77299DE3FD73F /* Player-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Player-Info.plist"; sourceTree = "<group>"; };
-		175A82364082445A0EC506AB082ECA6F /* ModalSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModalSize.swift; path = Presentr/ModalSize.swift; sourceTree = "<group>"; };
-		182CB281FBC245D9709B360E9FA4E00C /* Presentr */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Presentr; path = Presentr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ABB0D4FAF7A53920FC986935A8A5EE0 /* Presentr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentr-umbrella.h"; sourceTree = "<group>"; };
-		1CCF259A69B7177FF128EDCF8ACD8E59 /* OTPTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPTextField.swift; path = OTPFieldView/OTPTextField.swift; sourceTree = "<group>"; };
-		1D8854815B3B9C8476A9F0DAF9B5511D /* FlipHorizontalAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlipHorizontalAnimation.swift; path = Presentr/FlipHorizontalAnimation.swift; sourceTree = "<group>"; };
-		1EFD1DA4AE3EFEDAA0BA02D45B8D7519 /* Pods-bkalo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-bkalo-frameworks.sh"; sourceTree = "<group>"; };
-		1F5ADD455EE417E7102525D416C80A63 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "Montserrat-Regular.ttf"; path = "Presentr/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		1FB9D4C7508C86C861D6433F4B9134FC /* Pods-bkalo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bkalo-Info.plist"; sourceTree = "<group>"; };
-		1FDA168CF91A3EDCDB9418C097C36FA4 /* Presentr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presentr.release.xcconfig; sourceTree = "<group>"; };
-		20E805A188A6211BA0C064F3E2DEAE36 /* Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Player.debug.xcconfig; sourceTree = "<group>"; };
-		21C940F61C3A7A6B4338ACF224C837F5 /* Card.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Cards/Sources/Card.swift; sourceTree = "<group>"; };
-		2DD9AB5C3130FFCCD4C52BB68F8A6488 /* Presentr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presentr.debug.xcconfig; sourceTree = "<group>"; };
-		30BAF278E58DA53A84F36C06AF16EBB5 /* Pods-bkalo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-bkalo.modulemap"; sourceTree = "<group>"; };
-		30C352A953994F37B4373E34AE6AAE8E /* Player.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Player.modulemap; sourceTree = "<group>"; };
-		30E478DE7C33E7C92850B74A4DC4578D /* OTPFieldView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OTPFieldView.modulemap; sourceTree = "<group>"; };
-		3239ABED7DCC71A82715DB54C0324120 /* Presentr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Presentr.modulemap; sourceTree = "<group>"; };
-		3369D98FC16E6AA24391752E93DE555F /* PresentrShadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentrShadow.swift; path = Presentr/PresentrShadow.swift; sourceTree = "<group>"; };
-		3DED9CE5AC75D9E5ABE9BAAC83AEF859 /* Cards-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cards-umbrella.h"; sourceTree = "<group>"; };
-		415FCBD788C48F9280BC85F7B42F8BFE /* Pods-bkalo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bkalo.debug.xcconfig"; sourceTree = "<group>"; };
-		474B6859E0A3E989CBED9BF85E8EB071 /* OTPFieldView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTPFieldView.debug.xcconfig; sourceTree = "<group>"; };
-		579840D2C65D2B07F07F9AEA80805910 /* Pods-bkalo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-bkalo-dummy.m"; sourceTree = "<group>"; };
-		59E5E6A0A8BE8A465EC622E8F6AD0522 /* CardGroupSliding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardGroupSliding.swift; path = Cards/Sources/CardGroupSliding.swift; sourceTree = "<group>"; };
-		5BE8C719535F920E61215628DA70AA72 /* Player-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Player-dummy.m"; sourceTree = "<group>"; };
-		5C08AE3835639A2111ACBCE5382CE742 /* Player */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Player; path = Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C2EFD2A1FB8FC0322D6751B47775338 /* BackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Presentr/BackgroundView.swift; sourceTree = "<group>"; };
-		638C2C19AB0F8A1764CF1130EB56CEE0 /* Player-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Player-umbrella.h"; sourceTree = "<group>"; };
-		642345148D9E75CD300048EA822CC501 /* Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Player.release.xcconfig; sourceTree = "<group>"; };
-		6578C31705510FD531130C7761DC3515 /* Presentr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presentr-dummy.m"; sourceTree = "<group>"; };
-		671ECF70BA30A7CBB9C085E026AD482A /* CoverHorizontalAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverHorizontalAnimation.swift; path = Presentr/CoverHorizontalAnimation.swift; sourceTree = "<group>"; };
-		6EDDDCD12D273AA494B9B9A971B262FC /* AlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertViewController.swift; path = Presentr/AlertViewController.swift; sourceTree = "<group>"; };
-		713C6C344DC6E6A8E41DD32345DB89B1 /* Player.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Sources/Player.swift; sourceTree = "<group>"; };
-		74248FE310FC158A451DB8FC66B62320 /* Cards-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cards-dummy.m"; sourceTree = "<group>"; };
-		79151EE3FBC16402BF3406969934F414 /* LayoutHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutHelper.swift; path = Cards/Sources/LayoutHelper.swift; sourceTree = "<group>"; };
-		7B821153487C901DB091B1B8D9ED940D /* Pods-bkalo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-bkalo-umbrella.h"; sourceTree = "<group>"; };
-		81036E19CFD64F97C751F8A83F07CB0E /* ModalCenterPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModalCenterPosition.swift; path = Presentr/ModalCenterPosition.swift; sourceTree = "<group>"; };
-		811A2411893D818FF9248DC539C3873B /* CrossDissolveAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossDissolveAnimation.swift; path = Presentr/CrossDissolveAnimation.swift; sourceTree = "<group>"; };
-		8250477FB59BCFC905896E2292DFC679 /* OTPFieldView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTPFieldView-dummy.m"; sourceTree = "<group>"; };
-		833809DB57EA087B03849E68BD3A71AD /* OTPFieldView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTPFieldView.release.xcconfig; sourceTree = "<group>"; };
-		89C59D715F0594289FF0FF812E4F1C71 /* Pods-bkalo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bkalo.release.xcconfig"; sourceTree = "<group>"; };
-		9AE979DE79D20B3A68E8532718FA3396 /* Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cards.debug.xcconfig; sourceTree = "<group>"; };
+		45C787D2BBF33135680E6A40870F5F48 /* Pods-bkalo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bkalo-acknowledgements.plist"; sourceTree = "<group>"; };
+		51293C64B5129945FCD92B61C333D145 /* Pods-bkalo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bkalo-Info.plist"; sourceTree = "<group>"; };
+		58559A01EAE8FF537BDDCC7005F0051E /* Pods-bkalo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bkalo.debug.xcconfig"; sourceTree = "<group>"; };
+		6B197C9D7F82479353DE35C25AE6A07D /* Pods-bkalo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bkalo.release.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A7A6413A2534FE4DFB312B3F880B2DF /* Pods-bkalo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-bkalo-umbrella.h"; sourceTree = "<group>"; };
+		9893E1E3A2583BEB20CD015B276871D3 /* Pods-bkalo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-bkalo.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F0DFEA5A3A212A69CF716932237A34D /* Cards-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cards-Info.plist"; sourceTree = "<group>"; };
-		A5D9A587323B176EDDA3250F6B0AC3A2 /* CoverFromCornerAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverFromCornerAnimation.swift; path = Presentr/CoverFromCornerAnimation.swift; sourceTree = "<group>"; };
-		B09DE780C6101DDAFEC26DF7D4E2B539 /* Cards.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cards.modulemap; sourceTree = "<group>"; };
-		B55C67730FFC801225FE888F19337A86 /* Presentr-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Presentr-Info.plist"; sourceTree = "<group>"; };
 		B5F22723605FF535DBE52C73B819183F /* Pods-bkalo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-bkalo"; path = Pods_bkalo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9AC2914FD56B7CBA2A2551D1B1D540A /* Pods-bkalo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bkalo-acknowledgements.plist"; sourceTree = "<group>"; };
-		BCDC65EF34DB39A10EC67FE8D97682DB /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Cards/Sources/Animator.swift; sourceTree = "<group>"; };
-		BD915B7371E82F7E809F2EE21895E7E5 /* PresentationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentationType.swift; path = Presentr/PresentationType.swift; sourceTree = "<group>"; };
-		BEFEA4325C5C52E374D74C61544C2929 /* OTPFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OTPFieldView.swift; path = OTPFieldView/OTPFieldView.swift; sourceTree = "<group>"; };
-		BF1127AB9474724C3556DC2D0DA366FE /* Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cards.release.xcconfig; sourceTree = "<group>"; };
-		C4311536E180374097FE060C1671D468 /* OTPFieldView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OTPFieldView-Info.plist"; sourceTree = "<group>"; };
-		CA1513492F7B676D16C7D3FC9A45CF82 /* OTPFieldView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTPFieldView.h; path = OTPFieldView/OTPFieldView.h; sourceTree = "<group>"; };
-		CBAB6698873F037E5444C48C31E45023 /* CardHighlight.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardHighlight.swift; path = Cards/Sources/CardHighlight.swift; sourceTree = "<group>"; };
-		CD87A849B8DEBDF75F0E65D500A84007 /* Presentr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presentr-prefix.pch"; sourceTree = "<group>"; };
-		CEC68CE4F86C11D624E66266ADBE5130 /* CoverVerticalAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverVerticalAnimation.swift; path = Presentr/CoverVerticalAnimation.swift; sourceTree = "<group>"; };
-		CF7A97DC46FFC3BE8B6EA6FC8A041980 /* CardArticle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardArticle.swift; path = Cards/Sources/CardArticle.swift; sourceTree = "<group>"; };
-		D19FCF5B3359812B4A859ED4E69AB2DF /* DetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Cards/Sources/DetailViewController.swift; sourceTree = "<group>"; };
-		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D3A441065582B1D13EF69273960888FA /* AlertViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AlertViewController.xib; path = Presentr/AlertViewController.xib; sourceTree = "<group>"; };
-		D64B3307C6A4C72ED559A9F3EAC4301D /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "SourceSansPro-Regular.ttf"; path = "Presentr/SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
-		E1416DBFAE29AAC8FA946DCE54E2A68A /* TransitionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionType.swift; path = Presentr/TransitionType.swift; sourceTree = "<group>"; };
-		E5D5971795AACA0C2DEC2001E4BF3831 /* OTPFieldView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTPFieldView-prefix.pch"; sourceTree = "<group>"; };
-		E7B03DD1792E4394268159082130CE54 /* Presentr+Equatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Presentr+Equatable.swift"; path = "Presentr/Presentr+Equatable.swift"; sourceTree = "<group>"; };
-		EAA7359D0C4B69F94E96030BAA1F38E0 /* Presentr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presentr.swift; path = Presentr/Presentr.swift; sourceTree = "<group>"; };
-		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EB0B250A1F9C812DF391D06F4C082F9A /* CoverVerticalFromTopAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoverVerticalFromTopAnimation.swift; path = Presentr/CoverVerticalFromTopAnimation.swift; sourceTree = "<group>"; };
-		EBDCBC7248C9BE141DE04E5D49C73324 /* KeyboardTranslation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardTranslation.swift; path = Presentr/KeyboardTranslation.swift; sourceTree = "<group>"; };
-		EC7F06F364614C51E830F26C60172A0B /* Cards */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cards; path = Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F127FF24C324E744EC95904C20CAF9F6 /* CardPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardPlayer.swift; path = Cards/Sources/CardPlayer.swift; sourceTree = "<group>"; };
-		F8650D1E2AEAEF1D8A264CAB61C0D067 /* Pods-bkalo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-bkalo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F88F59BDF501D70AE0E3D77BA47AE730 /* PresentrAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresentrAnimation.swift; path = Presentr/PresentrAnimation.swift; sourceTree = "<group>"; };
-		FA82CC607796CAE5429E0F9B596577EF /* Cards-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cards-prefix.pch"; sourceTree = "<group>"; };
-		FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OTPFieldView; path = OTPFieldView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4823060A0597713ECD674E8191FA51C /* Pods-bkalo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-bkalo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F7D79A392B45847B1D97B6919403AF39 /* Pods-bkalo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-bkalo-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09933DBC2A01F7FF2AC0CB5A74851A89 /* Frameworks */ = {
+		811FF7325340A89DDB1F488A7830F497 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				706F2D6FBE07204D5F62C2F24B007BBD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9DE3AB664F65858F2350742D0A1F143C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E176D1526FCA0696D58D504B0027A8BE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A21843CC7E3CD122264BA4FF4BCD6BF5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A60AE45490BFB435DFE76393A09D4400 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C45BC212F9DEA04ED364DCF2BAF0D2FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3943A2EA9465506E40527C423456F82B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9B098ABBFFDC0277D2EEE317AB1709F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				209664C2519AAAE32476A649A73BCC14 /* Foundation.framework in Frameworks */,
-				5726F1818BC9A249CCE02C1615CC3B0A /* UIKit.framework in Frameworks */,
+				2C61BAA4A617F013DD10ECAC7AD56A68 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CC8AB076300D38EEFD20C7F5372E0D3 /* Pods-bkalo */ = {
+		1AA3815866862271913F16719E14D639 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30BAF278E58DA53A84F36C06AF16EBB5 /* Pods-bkalo.modulemap */,
-				F8650D1E2AEAEF1D8A264CAB61C0D067 /* Pods-bkalo-acknowledgements.markdown */,
-				B9AC2914FD56B7CBA2A2551D1B1D540A /* Pods-bkalo-acknowledgements.plist */,
-				579840D2C65D2B07F07F9AEA80805910 /* Pods-bkalo-dummy.m */,
-				1EFD1DA4AE3EFEDAA0BA02D45B8D7519 /* Pods-bkalo-frameworks.sh */,
-				1FB9D4C7508C86C861D6433F4B9134FC /* Pods-bkalo-Info.plist */,
-				7B821153487C901DB091B1B8D9ED940D /* Pods-bkalo-umbrella.h */,
-				415FCBD788C48F9280BC85F7B42F8BFE /* Pods-bkalo.debug.xcconfig */,
-				89C59D715F0594289FF0FF812E4F1C71 /* Pods-bkalo.release.xcconfig */,
+				B5F22723605FF535DBE52C73B819183F /* Pods-bkalo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50B1FA013FFB080E36914B334992AE11 /* Pods-bkalo */ = {
+			isa = PBXGroup;
+			children = (
+				9893E1E3A2583BEB20CD015B276871D3 /* Pods-bkalo.modulemap */,
+				E4823060A0597713ECD674E8191FA51C /* Pods-bkalo-acknowledgements.markdown */,
+				45C787D2BBF33135680E6A40870F5F48 /* Pods-bkalo-acknowledgements.plist */,
+				F7D79A392B45847B1D97B6919403AF39 /* Pods-bkalo-dummy.m */,
+				51293C64B5129945FCD92B61C333D145 /* Pods-bkalo-Info.plist */,
+				7A7A6413A2534FE4DFB312B3F880B2DF /* Pods-bkalo-umbrella.h */,
+				58559A01EAE8FF537BDDCC7005F0051E /* Pods-bkalo.debug.xcconfig */,
+				6B197C9D7F82479353DE35C25AE6A07D /* Pods-bkalo.release.xcconfig */,
 			);
 			name = "Pods-bkalo";
 			path = "Target Support Files/Pods-bkalo";
 			sourceTree = "<group>";
 		};
-		0E18405C552DB8CE10D322EED379739A /* Support Files */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B09DE780C6101DDAFEC26DF7D4E2B539 /* Cards.modulemap */,
-				74248FE310FC158A451DB8FC66B62320 /* Cards-dummy.m */,
-				9F0DFEA5A3A212A69CF716932237A34D /* Cards-Info.plist */,
-				FA82CC607796CAE5429E0F9B596577EF /* Cards-prefix.pch */,
-				3DED9CE5AC75D9E5ABE9BAAC83AEF859 /* Cards-umbrella.h */,
-				9AE979DE79D20B3A68E8532718FA3396 /* Cards.debug.xcconfig */,
-				BF1127AB9474724C3556DC2D0DA366FE /* Cards.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Cards";
-			sourceTree = "<group>";
-		};
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3D12066127F4710C4A4EE57675FBB7DC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D3A441065582B1D13EF69273960888FA /* AlertViewController.xib */,
-				1F5ADD455EE417E7102525D416C80A63 /* Montserrat-Regular.ttf */,
-				D64B3307C6A4C72ED559A9F3EAC4301D /* SourceSansPro-Regular.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		4D35E06073FCDFEF201D79651FC55C60 /* Cards */ = {
-			isa = PBXGroup;
-			children = (
-				BCDC65EF34DB39A10EC67FE8D97682DB /* Animator.swift */,
-				21C940F61C3A7A6B4338ACF224C837F5 /* Card.swift */,
-				CF7A97DC46FFC3BE8B6EA6FC8A041980 /* CardArticle.swift */,
-				0EE77A6BC208EE112EEA668E95F3E67D /* CardGroup.swift */,
-				59E5E6A0A8BE8A465EC622E8F6AD0522 /* CardGroupSliding.swift */,
-				CBAB6698873F037E5444C48C31E45023 /* CardHighlight.swift */,
-				F127FF24C324E744EC95904C20CAF9F6 /* CardPlayer.swift */,
-				D19FCF5B3359812B4A859ED4E69AB2DF /* DetailViewController.swift */,
-				79151EE3FBC16402BF3406969934F414 /* LayoutHelper.swift */,
-				0E18405C552DB8CE10D322EED379739A /* Support Files */,
-			);
-			name = Cards;
-			path = Cards;
-			sourceTree = "<group>";
-		};
-		563D5C84776E396EC8D05737AF323583 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3239ABED7DCC71A82715DB54C0324120 /* Presentr.modulemap */,
-				6578C31705510FD531130C7761DC3515 /* Presentr-dummy.m */,
-				B55C67730FFC801225FE888F19337A86 /* Presentr-Info.plist */,
-				CD87A849B8DEBDF75F0E65D500A84007 /* Presentr-prefix.pch */,
-				1ABB0D4FAF7A53920FC986935A8A5EE0 /* Presentr-umbrella.h */,
-				2DD9AB5C3130FFCCD4C52BB68F8A6488 /* Presentr.debug.xcconfig */,
-				1FDA168CF91A3EDCDB9418C097C36FA4 /* Presentr.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Presentr";
-			sourceTree = "<group>";
-		};
-		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
-				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		5D3EF86AFE462CA8A3493C88600AF2D2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EC7F06F364614C51E830F26C60172A0B /* Cards */,
-				FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */,
-				5C08AE3835639A2111ACBCE5382CE742 /* Player */,
-				B5F22723605FF535DBE52C73B819183F /* Pods-bkalo */,
-				182CB281FBC245D9709B360E9FA4E00C /* Presentr */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		62D6C5541C480102A7CCAFE756311600 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				30C352A953994F37B4373E34AE6AAE8E /* Player.modulemap */,
-				5BE8C719535F920E61215628DA70AA72 /* Player-dummy.m */,
-				1021636B6998DFD6DAF77299DE3FD73F /* Player-Info.plist */,
-				0E6548FA82680E2CBB485D3577892A88 /* Player-prefix.pch */,
-				638C2C19AB0F8A1764CF1130EB56CEE0 /* Player-umbrella.h */,
-				20E805A188A6211BA0C064F3E2DEAE36 /* Player.debug.xcconfig */,
-				642345148D9E75CD300048EA822CC501 /* Player.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Player";
-			sourceTree = "<group>";
-		};
-		8ADB8FAA84174F25713725CE63DDBAE3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				30E478DE7C33E7C92850B74A4DC4578D /* OTPFieldView.modulemap */,
-				8250477FB59BCFC905896E2292DFC679 /* OTPFieldView-dummy.m */,
-				C4311536E180374097FE060C1671D468 /* OTPFieldView-Info.plist */,
-				E5D5971795AACA0C2DEC2001E4BF3831 /* OTPFieldView-prefix.pch */,
-				01A30781E73B39A26B448F05435B0F45 /* OTPFieldView-umbrella.h */,
-				474B6859E0A3E989CBED9BF85E8EB071 /* OTPFieldView.debug.xcconfig */,
-				833809DB57EA087B03849E68BD3A71AD /* OTPFieldView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/OTPFieldView";
-			sourceTree = "<group>";
-		};
-		960A366FFDA6CAB3FEE3E8613687AFB3 /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				713C6C344DC6E6A8E41DD32345DB89B1 /* Player.swift */,
-				62D6C5541C480102A7CCAFE756311600 /* Support Files */,
-			);
-			name = Player;
-			path = Player;
-			sourceTree = "<group>";
-		};
-		A038C4DBAA32263C2FF8722C055AA10D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0CC8AB076300D38EEFD20C7F5372E0D3 /* Pods-bkalo */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				EABB076A23B129634C662087896B182F /* Pods */,
-				5D3EF86AFE462CA8A3493C88600AF2D2 /* Products */,
-				A038C4DBAA32263C2FF8722C055AA10D /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1AA3815866862271913F16719E14D639 /* Products */,
+				FB91129D2378AEE366AFCBF03F5FB60D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D88FAD26A85EB41E968F8817ED7ED358 /* Presentr */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6EDDDCD12D273AA494B9B9A971B262FC /* AlertViewController.swift */,
-				5C2EFD2A1FB8FC0322D6751B47775338 /* BackgroundView.swift */,
-				A5D9A587323B176EDDA3250F6B0AC3A2 /* CoverFromCornerAnimation.swift */,
-				671ECF70BA30A7CBB9C085E026AD482A /* CoverHorizontalAnimation.swift */,
-				CEC68CE4F86C11D624E66266ADBE5130 /* CoverVerticalAnimation.swift */,
-				EB0B250A1F9C812DF391D06F4C082F9A /* CoverVerticalFromTopAnimation.swift */,
-				811A2411893D818FF9248DC539C3873B /* CrossDissolveAnimation.swift */,
-				1D8854815B3B9C8476A9F0DAF9B5511D /* FlipHorizontalAnimation.swift */,
-				EBDCBC7248C9BE141DE04E5D49C73324 /* KeyboardTranslation.swift */,
-				81036E19CFD64F97C751F8A83F07CB0E /* ModalCenterPosition.swift */,
-				175A82364082445A0EC506AB082ECA6F /* ModalSize.swift */,
-				BD915B7371E82F7E809F2EE21895E7E5 /* PresentationType.swift */,
-				EAA7359D0C4B69F94E96030BAA1F38E0 /* Presentr.swift */,
-				E7B03DD1792E4394268159082130CE54 /* Presentr+Equatable.swift */,
-				F88F59BDF501D70AE0E3D77BA47AE730 /* PresentrAnimation.swift */,
-				0A198290D5372A22B200B4C971A6EA5D /* PresentrController.swift */,
-				3369D98FC16E6AA24391752E93DE555F /* PresentrShadow.swift */,
-				E1416DBFAE29AAC8FA946DCE54E2A68A /* TransitionType.swift */,
-				3D12066127F4710C4A4EE57675FBB7DC /* Resources */,
-				563D5C84776E396EC8D05737AF323583 /* Support Files */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
-			name = Presentr;
-			path = Presentr;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EABB076A23B129634C662087896B182F /* Pods */ = {
+		FB91129D2378AEE366AFCBF03F5FB60D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4D35E06073FCDFEF201D79651FC55C60 /* Cards */,
-				EC56F4B4B669CE8830404831D85E3A4E /* OTPFieldView */,
-				960A366FFDA6CAB3FEE3E8613687AFB3 /* Player */,
-				D88FAD26A85EB41E968F8817ED7ED358 /* Presentr */,
+				50B1FA013FFB080E36914B334992AE11 /* Pods-bkalo */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		EC56F4B4B669CE8830404831D85E3A4E /* OTPFieldView */ = {
-			isa = PBXGroup;
-			children = (
-				CA1513492F7B676D16C7D3FC9A45CF82 /* OTPFieldView.h */,
-				BEFEA4325C5C52E374D74C61544C2929 /* OTPFieldView.swift */,
-				1CCF259A69B7177FF128EDCF8ACD8E59 /* OTPTextField.swift */,
-				8ADB8FAA84174F25713725CE63DDBAE3 /* Support Files */,
-			);
-			name = OTPFieldView;
-			path = OTPFieldView;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1CF6909BD5DD390F6A8A0F00A04EF160 /* Headers */ = {
+		B1A660694E00675F70D226847C5C12FD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881020A4719D8237DC571C8DF1434137 /* Pods-bkalo-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		512D069EA14F2A50E8E6A3F4A49009E5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				778D379DA472B7960C3AD5793AC46BE0 /* OTPFieldView.h in Headers */,
-				19566CED5C43AB99F059D9DA194B80A7 /* OTPFieldView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60BF2DE4D64E49DCB02F3831B0CA11A3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A26DD2353C377D09DF3B47041ED4801 /* Presentr-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBBFD98AFB6F06CBB78E809A629F548D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71AB939A92664F8F6E0BCAFE11E836A0 /* Cards-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F89DDABB0933F3ABCC7CE6CF36CD19A8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DF4DE12A14E1D76238B909267A3185B7 /* Player-umbrella.h in Headers */,
+				96A4AE5C130329EDE8B4A608691FF397 /* Pods-bkalo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3566CE7721250363BAE931141A0703B1 /* Player */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 006DAEB62E0F5229DE283C1763265B26 /* Build configuration list for PBXNativeTarget "Player" */;
-			buildPhases = (
-				F89DDABB0933F3ABCC7CE6CF36CD19A8 /* Headers */,
-				CDCFF25D36744FC9763FF93D3B88850A /* Sources */,
-				C45BC212F9DEA04ED364DCF2BAF0D2FA /* Frameworks */,
-				D5544317A9B10924B5D8C8EE10127A20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Player;
-			productName = Player;
-			productReference = 5C08AE3835639A2111ACBCE5382CE742 /* Player */;
-			productType = "com.apple.product-type.framework";
-		};
-		3BFA50DA07196AD4DB6512C559850F45 /* OTPFieldView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6433D111B6A10EB550A13E319D96F871 /* Build configuration list for PBXNativeTarget "OTPFieldView" */;
-			buildPhases = (
-				512D069EA14F2A50E8E6A3F4A49009E5 /* Headers */,
-				7169D6FD44672A7DD71CF81A51DCA21C /* Sources */,
-				A21843CC7E3CD122264BA4FF4BCD6BF5 /* Frameworks */,
-				5718415F2B342E587E537EDAE0A6A04A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OTPFieldView;
-			productName = OTPFieldView;
-			productReference = FD1309C85A2B4DD96C17CEE227B41C92 /* OTPFieldView */;
-			productType = "com.apple.product-type.framework";
-		};
-		433F79D5F3953F8EA8E7B0C7A2A27D32 /* Presentr */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 007113D407F2DBADACBA23E0D40E73CE /* Build configuration list for PBXNativeTarget "Presentr" */;
-			buildPhases = (
-				60BF2DE4D64E49DCB02F3831B0CA11A3 /* Headers */,
-				30504AC601E40BFDB79A5D0D31B6D65B /* Sources */,
-				9DE3AB664F65858F2350742D0A1F143C /* Frameworks */,
-				BA96CB2E912189F83EE19ECE202488DE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Presentr;
-			productName = Presentr;
-			productReference = 182CB281FBC245D9709B360E9FA4E00C /* Presentr */;
-			productType = "com.apple.product-type.framework";
-		};
 		4896F731E925929CA370AA1628ED9F41 /* Pods-bkalo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C30126C60B315A34B326ED55C3701E45 /* Build configuration list for PBXNativeTarget "Pods-bkalo" */;
+			buildConfigurationList = 49D83E62B379730344FFACAF53871166 /* Build configuration list for PBXNativeTarget "Pods-bkalo" */;
 			buildPhases = (
-				1CF6909BD5DD390F6A8A0F00A04EF160 /* Headers */,
-				80B3CF135692440C33BB2556C8440FE5 /* Sources */,
-				09933DBC2A01F7FF2AC0CB5A74851A89 /* Frameworks */,
-				2A228EF6853217D4F02C01FDC53257CF /* Resources */,
+				B1A660694E00675F70D226847C5C12FD /* Headers */,
+				B349994DF2906001E0BD618069AC19AD /* Sources */,
+				811FF7325340A89DDB1F488A7830F497 /* Frameworks */,
+				E6939809C0199C27D6174B529498082E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5F963C8B2E4DB5C9DB047FDBC40B1B1C /* PBXTargetDependency */,
-				C0B6FFBFBF4748A0A0DA18A79469DF2E /* PBXTargetDependency */,
-				1BC4A4272D47E85D9756EE3E5D5075F4 /* PBXTargetDependency */,
-				60F4FF3BFBEFA570FD971B47AD3FB11B /* PBXTargetDependency */,
 			);
 			name = "Pods-bkalo";
 			productName = Pods_bkalo;
 			productReference = B5F22723605FF535DBE52C73B819183F /* Pods-bkalo */;
-			productType = "com.apple.product-type.framework";
-		};
-		95686D88267B7D426C897EA9E91FC217 /* Cards */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F57D8487F0BD5AFD6C6CA33D5C047050 /* Build configuration list for PBXNativeTarget "Cards" */;
-			buildPhases = (
-				BBBFD98AFB6F06CBB78E809A629F548D /* Headers */,
-				E4A9F483B4248DD697B3CEF73B4D1833 /* Sources */,
-				E9B098ABBFFDC0277D2EEE317AB1709F /* Frameworks */,
-				219C91C27D242446798B6AC5D6F82EB3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E26D688A5D97B0ABACDD0DEDCA92E16F /* PBXTargetDependency */,
-			);
-			name = Cards;
-			productName = Cards;
-			productReference = EC7F06F364614C51E830F26C60172A0B /* Cards */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -598,52 +146,17 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5D3EF86AFE462CA8A3493C88600AF2D2 /* Products */;
+			productRefGroup = 1AA3815866862271913F16719E14D639 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95686D88267B7D426C897EA9E91FC217 /* Cards */,
-				3BFA50DA07196AD4DB6512C559850F45 /* OTPFieldView */,
-				3566CE7721250363BAE931141A0703B1 /* Player */,
 				4896F731E925929CA370AA1628ED9F41 /* Pods-bkalo */,
-				433F79D5F3953F8EA8E7B0C7A2A27D32 /* Presentr */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		219C91C27D242446798B6AC5D6F82EB3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A228EF6853217D4F02C01FDC53257CF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5718415F2B342E587E537EDAE0A6A04A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA96CB2E912189F83EE19ECE202488DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F5D6FF671B6B460B0D1E4088090EEC93 /* AlertViewController.xib in Resources */,
-				134F6BB89F7E3621ACF8421FEF002199 /* Montserrat-Regular.ttf in Resources */,
-				FA427B99A386B0665D4F6FF63668A9AA /* SourceSansPro-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5544317A9B10924B5D8C8EE10127A20 /* Resources */ = {
+		E6939809C0199C27D6174B529498082E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -653,115 +166,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		30504AC601E40BFDB79A5D0D31B6D65B /* Sources */ = {
+		B349994DF2906001E0BD618069AC19AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADEBF21E113FDABB1094F748C4278A3F /* AlertViewController.swift in Sources */,
-				3B14DC00D0297FD357C1796B878B3DB5 /* BackgroundView.swift in Sources */,
-				41EDE7930AEB212A96EF262F324A4063 /* CoverFromCornerAnimation.swift in Sources */,
-				650C4F0B783A316DB22D0776E7B03367 /* CoverHorizontalAnimation.swift in Sources */,
-				5B55F03FF09EABA9EF8CEBB43C472114 /* CoverVerticalAnimation.swift in Sources */,
-				9367926ED3B3C27D916EFEEB677E7E96 /* CoverVerticalFromTopAnimation.swift in Sources */,
-				9713D0CFFE57995AD3B2C1A5EC655BAE /* CrossDissolveAnimation.swift in Sources */,
-				7D8C9B26847D227148BCDBFB2050D328 /* FlipHorizontalAnimation.swift in Sources */,
-				14C9966C75A38B295E40C4625340F6FF /* KeyboardTranslation.swift in Sources */,
-				8CFC635509ACFEC7FCEC7127553F6A05 /* ModalCenterPosition.swift in Sources */,
-				821FF06D50C71EB0855DF01BBB9FD0CE /* ModalSize.swift in Sources */,
-				DEE1462383DC4D8431B3808D9FD0EE06 /* PresentationType.swift in Sources */,
-				AE7A37125A4E80305D09F0D64965EAD2 /* Presentr.swift in Sources */,
-				20A4D1C3509DBEC8D32AECEEB6C39B7F /* Presentr+Equatable.swift in Sources */,
-				207593290C5587481C4905DBF87AF657 /* Presentr-dummy.m in Sources */,
-				4C5643AE8277B6CF56F41D544B509BD3 /* PresentrAnimation.swift in Sources */,
-				F2F50798C6672057582544FD912F00B0 /* PresentrController.swift in Sources */,
-				0D417B6BE23C569B32F7D2F4E0D3242C /* PresentrShadow.swift in Sources */,
-				201F09778D6719F515BC30136306EF36 /* TransitionType.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7169D6FD44672A7DD71CF81A51DCA21C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF5C187D8C85AB3548B6EA7CE4B3B032 /* OTPFieldView.swift in Sources */,
-				AE3A3FF9A48A17875E549C5C3DC3FC1B /* OTPFieldView-dummy.m in Sources */,
-				9DB4CBDFE92F4E8ED8DEF17B0D55548B /* OTPTextField.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80B3CF135692440C33BB2556C8440FE5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				109783097B549F7381F023E672A136D2 /* Pods-bkalo-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDCFF25D36744FC9763FF93D3B88850A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5247E1C5DBC657E0D72C92BF12B160F /* Player.swift in Sources */,
-				EE7F2A26904142D64195B6B7AF27AB18 /* Player-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4A9F483B4248DD697B3CEF73B4D1833 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFEC6DEC7344B137EBF55E058EF50CBA /* Animator.swift in Sources */,
-				D1F664D5B7FE2FEA354879E78EA92AF4 /* Card.swift in Sources */,
-				1B7A99D34BE50B5925C5D1208D16EB75 /* CardArticle.swift in Sources */,
-				5AE7C14FFF09112BCD4611622CB4A9CD /* CardGroup.swift in Sources */,
-				72FBB102D1C21F9E63A0383DFE3BA755 /* CardGroupSliding.swift in Sources */,
-				109699E10AE9993D81216C27343B7B94 /* CardHighlight.swift in Sources */,
-				E1381CA5CCF65B3100CF072F175DD4DC /* CardPlayer.swift in Sources */,
-				D30EB7E7DCEA60F3C63C44DB07BE1F51 /* Cards-dummy.m in Sources */,
-				66154092C596A9A1437F9756B30EFDFC /* DetailViewController.swift in Sources */,
-				36CB921C76402CF96E65451E5BF7CA8E /* LayoutHelper.swift in Sources */,
+				E97DDE60BAF34B0E6B3BB62ADC2B5009 /* Pods-bkalo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		1BC4A4272D47E85D9756EE3E5D5075F4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Player;
-			target = 3566CE7721250363BAE931141A0703B1 /* Player */;
-			targetProxy = 1BE0B29D780266CFBC9B68B0D262E6A7 /* PBXContainerItemProxy */;
-		};
-		5F963C8B2E4DB5C9DB047FDBC40B1B1C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cards;
-			target = 95686D88267B7D426C897EA9E91FC217 /* Cards */;
-			targetProxy = 24630125932ACA2E27039AB5FC0EF477 /* PBXContainerItemProxy */;
-		};
-		60F4FF3BFBEFA570FD971B47AD3FB11B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Presentr;
-			target = 433F79D5F3953F8EA8E7B0C7A2A27D32 /* Presentr */;
-			targetProxy = E96EBC9FF6695DE6560CF844F93FC17B /* PBXContainerItemProxy */;
-		};
-		C0B6FFBFBF4748A0A0DA18A79469DF2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OTPFieldView;
-			target = 3BFA50DA07196AD4DB6512C559850F45 /* OTPFieldView */;
-			targetProxy = 8C404DF2C37973CB7125170F2BACC307 /* PBXContainerItemProxy */;
-		};
-		E26D688A5D97B0ABACDD0DEDCA92E16F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Player;
-			target = 3566CE7721250363BAE931141A0703B1 /* Player */;
-			targetProxy = 3B560FE200695FD73544F65538E2EBE3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		3302B09DC17B07A969C5B7936DFC1665 /* Debug */ = {
+		1F97E3BAF3F4D75A87D2DF3F0EE567FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 415FCBD788C48F9280BC85F7B42F8BFE /* Pods-bkalo.debug.xcconfig */;
+			baseConfigurationReference = 6B197C9D7F82479353DE35C25AE6A07D /* Pods-bkalo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -791,10 +209,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		44A4B2FB6211B90C1949A44A381F6D1F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -855,181 +274,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		4AEF6443C513AB4C8B16D7F634D85485 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AE979DE79D20B3A68E8532718FA3396 /* Cards.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cards/Cards-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cards/Cards-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Cards/Cards.modulemap";
-				PRODUCT_MODULE_NAME = Cards;
-				PRODUCT_NAME = Cards;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		640FCF0D111E10DE9D35F8CAB929A951 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FDA168CF91A3EDCDB9418C097C36FA4 /* Presentr.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Presentr/Presentr-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Presentr/Presentr-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Presentr/Presentr.modulemap";
-				PRODUCT_MODULE_NAME = Presentr;
-				PRODUCT_NAME = Presentr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9B63404BD7D3F122569C56BB2921CD67 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 474B6859E0A3E989CBED9BF85E8EB071 /* OTPFieldView.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OTPFieldView/OTPFieldView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OTPFieldView/OTPFieldView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/OTPFieldView/OTPFieldView.modulemap";
-				PRODUCT_MODULE_NAME = OTPFieldView;
-				PRODUCT_NAME = OTPFieldView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9E5906B8CA721F8A73CDA2C12E0C40C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF1127AB9474724C3556DC2D0DA366FE /* Cards.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cards/Cards-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cards/Cards-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Cards/Cards.modulemap";
-				PRODUCT_MODULE_NAME = Cards;
-				PRODUCT_NAME = Cards;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A07598AD8F39E0E75E530F013C5CD233 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 833809DB57EA087B03849E68BD3A71AD /* OTPFieldView.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/OTPFieldView/OTPFieldView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/OTPFieldView/OTPFieldView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/OTPFieldView/OTPFieldView.modulemap";
-				PRODUCT_MODULE_NAME = OTPFieldView;
-				PRODUCT_NAME = OTPFieldView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1099,78 +343,9 @@
 			};
 			name = Debug;
 		};
-		A191CEAF651A4545F2EE8597625433E5 /* Debug */ = {
+		CE6950506D5278D87378747520DF5087 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20E805A188A6211BA0C064F3E2DEAE36 /* Player.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Player/Player-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Player/Player-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Player/Player.modulemap";
-				PRODUCT_MODULE_NAME = Player;
-				PRODUCT_NAME = Player;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DE53EBCB2B386C066E7E92D6C1C88CA0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 642345148D9E75CD300048EA822CC501 /* Player.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Player/Player-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Player/Player-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Player/Player.modulemap";
-				PRODUCT_MODULE_NAME = Player;
-				PRODUCT_NAME = Player;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E47C5DBC0F59B1F51F4DED7A2E7EA9A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C59D715F0594289FF0FF812E4F1C71 /* Pods-bkalo.release.xcconfig */;
+			baseConfigurationReference = 58559A01EAE8FF537BDDCC7005F0051E /* Pods-bkalo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1200,41 +375,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FAE8D13FBC89648CA97B93857B9D7DCF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DD9AB5C3130FFCCD4C52BB68F8A6488 /* Presentr.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Presentr/Presentr-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Presentr/Presentr-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Presentr/Presentr.modulemap";
-				PRODUCT_MODULE_NAME = Presentr;
-				PRODUCT_NAME = Presentr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1243,24 +383,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		006DAEB62E0F5229DE283C1763265B26 /* Build configuration list for PBXNativeTarget "Player" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A191CEAF651A4545F2EE8597625433E5 /* Debug */,
-				DE53EBCB2B386C066E7E92D6C1C88CA0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		007113D407F2DBADACBA23E0D40E73CE /* Build configuration list for PBXNativeTarget "Presentr" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAE8D13FBC89648CA97B93857B9D7DCF /* Debug */,
-				640FCF0D111E10DE9D35F8CAB929A951 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1270,29 +392,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6433D111B6A10EB550A13E319D96F871 /* Build configuration list for PBXNativeTarget "OTPFieldView" */ = {
+		49D83E62B379730344FFACAF53871166 /* Build configuration list for PBXNativeTarget "Pods-bkalo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B63404BD7D3F122569C56BB2921CD67 /* Debug */,
-				A07598AD8F39E0E75E530F013C5CD233 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C30126C60B315A34B326ED55C3701E45 /* Build configuration list for PBXNativeTarget "Pods-bkalo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3302B09DC17B07A969C5B7936DFC1665 /* Debug */,
-				E47C5DBC0F59B1F51F4DED7A2E7EA9A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F57D8487F0BD5AFD6C6CA33D5C047050 /* Build configuration list for PBXNativeTarget "Cards" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4AEF6443C513AB4C8B16D7F634D85485 /* Debug */,
-				9E5906B8CA721F8A73CDA2C12E0C40C4 /* Release */,
+				CE6950506D5278D87378747520DF5087 /* Debug */,
+				1F97E3BAF3F4D75A87D2DF3F0EE567FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

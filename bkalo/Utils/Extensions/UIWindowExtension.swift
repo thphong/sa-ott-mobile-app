@@ -19,4 +19,14 @@ extension UIWindow {
         
         return windowScene.interfaceOrientation.isLandscape
     }
+    
+    func clearAllRootVC() {
+        guard let rootViewController = rootViewController else { return }
+        
+        rootViewController.dismiss(animated: false) {
+            self.rootViewController = nil
+        }
+        
+        rootViewController.navigationController?.popToRootViewController(animated: false)
+    }
 }

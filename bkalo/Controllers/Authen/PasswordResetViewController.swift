@@ -20,13 +20,13 @@ final class PasswordResetViewController: UIViewController {
         super.loadView()
         
         lblTitle = UILabel()
-        lblTitle.text = "Thiết lập mật khẩu"
+        lblTitle.text = "Set password"
         lblTitle.textColor = .appleBlue
         lblTitle.font = .interBold(24)
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
         
         lblPassword = UILabel()
-        lblPassword.text = "Mật khẩu"
+        lblPassword.text = "Password"
         lblPassword.textColor = .black
         lblPassword.font = .interMedium(16)
         lblPassword.translatesAutoresizingMaskIntoConstraints = false
@@ -35,13 +35,13 @@ final class PasswordResetViewController: UIViewController {
         tfPassword.delegate = self
         tfPassword.font = .interRegular(16)
         tfPassword.backgroundColor = .platinumGray
-        tfPassword.attributedPlaceholder = createPlaceholderAttributedString("Nhập mật khẩu")
+        tfPassword.attributedPlaceholder = createPlaceholderAttributedString("Enter your password")
         tfPassword.layer.cornerRadius = 10
         tfPassword.layer.masksToBounds = true
         tfPassword.translatesAutoresizingMaskIntoConstraints = false
         
         lblConfirmPassword = UILabel()
-        lblConfirmPassword.text = "Xác nhận mật khẩu"
+        lblConfirmPassword.text = "Confirm password"
         lblConfirmPassword.textColor = .black
         lblConfirmPassword.font = .interMedium(16)
         lblConfirmPassword.translatesAutoresizingMaskIntoConstraints = false
@@ -50,12 +50,12 @@ final class PasswordResetViewController: UIViewController {
         tfConfirmPassword.delegate = self
         tfConfirmPassword.font = .interRegular(16)
         tfConfirmPassword.backgroundColor = .platinumGray
-        tfConfirmPassword.attributedPlaceholder = createPlaceholderAttributedString("Nhập lại mật khẩu")
+        tfConfirmPassword.attributedPlaceholder = createPlaceholderAttributedString("Enter your password again")
         tfConfirmPassword.layer.cornerRadius = 10
         tfConfirmPassword.layer.masksToBounds = true
         tfConfirmPassword.translatesAutoresizingMaskIntoConstraints = false
         
-        let confirmTitle = "Hoàn tất"
+        let confirmTitle = "Done"
         let confirmAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
         let confirmString = NSMutableAttributedString(string: confirmTitle, attributes: confirmAttrs as [NSAttributedString.Key : Any])
         
@@ -120,9 +120,18 @@ final class PasswordResetViewController: UIViewController {
     }
     
     @objc private func actionConfirm() {
-        guard let pwd = tfPassword.text, let pwdConfirm = tfConfirmPassword.text, pwd == pwdConfirm else { return }
+        guard let phone = AuthenManager.shared.phoneNumber, let pwd = tfPassword.text, let pwdConfirm = tfConfirmPassword.text, pwd == pwdConfirm else { return }
         
-        Utils.showDialogMessage(navigateBack: true)
+        AuthenManager.shared.startRegisterAuthen(phoneNumber: phone, password: pwd) { success, message in
+            if success {
+                print("Phone number: \(phone)")
+                print("Register successful!")
+                Utils.showDialogMessage(navigateBack: true)
+            } else {
+                print("Register failed: \(message ?? "Unknown error")")
+                Utils.showErrorDialog(message: "Phone number is already registered!")
+            }
+        }
     }
 }
 

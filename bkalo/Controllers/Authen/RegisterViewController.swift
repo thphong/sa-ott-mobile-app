@@ -20,7 +20,7 @@ final class RegisterViewController: UIViewController {
         super.loadView()
         
         lblTitle = UILabel()
-        lblTitle.text = "Nhập số điện thoại"
+        lblTitle.text = "Enter your phone number"
         lblTitle.textColor = UIColor.appleBlue
         lblTitle.font = .interBold(24)
         lblTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +30,7 @@ final class RegisterViewController: UIViewController {
         tfPhoneNumber.backgroundColor = .platinumGray
         tfPhoneNumber.withPrefix = true
         tfPhoneNumber.withExamplePlaceholder = true
-        tfPhoneNumber.attributedPlaceholder = createPlaceholderAttributedString("Nhập số điện thoại")
+        tfPhoneNumber.attributedPlaceholder = createPlaceholderAttributedString("Enter your phone number")
         tfPhoneNumber.layer.cornerRadius = 10
         tfPhoneNumber.layer.masksToBounds = true
         tfPhoneNumber.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +57,7 @@ final class RegisterViewController: UIViewController {
         lblAgreement.addGestureRecognizer(tapGesture)
         lblAgreement.translatesAutoresizingMaskIntoConstraints = false
         
-        let nextTitle = "Tiếp tục"
+        let nextTitle = "Continue"
         let nextAttrs = [NSAttributedString.Key.font: UIFont.interMedium(18), NSAttributedString.Key.foregroundColor: UIColor.white]
         let nextString = NSMutableAttributedString(string: nextTitle, attributes: nextAttrs as [NSAttributedString.Key : Any])
         
@@ -140,6 +140,7 @@ final class RegisterViewController: UIViewController {
     @objc private func actionNext() {
         AuthenManager.shared.startAuthen(phoneNumber: tfPhoneNumber.text ?? "") { [weak self] success in
             guard success else { return }
+            AuthenManager.shared.phoneNumber = self?.tfPhoneNumber.text
             self?.navigationController?.pushViewController(LoginOTPViewController(), animated: true)
         }
     }
@@ -158,12 +159,12 @@ extension RegisterViewController {
     }
     
     private func createHaveAccountAttributedString() -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: "Bạn đã có tài khoản? ", attributes: [
+        let attributedString = NSMutableAttributedString(string: "Already have account? ", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.midGray,
             NSAttributedString.Key.font: UIFont.interMedium(16)
         ])
         
-        attributedString.append(NSAttributedString(string: "Đăng nhập ngay", attributes: [
+        attributedString.append(NSAttributedString(string: "Login now", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.appleBlue,
             NSAttributedString.Key.font: UIFont.interMedium(16)
         ]))

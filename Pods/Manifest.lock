@@ -1,28 +1,3 @@
-PODS:
-  - Cards (1.4.0):
-    - Player (= 0.13.0)
-  - OTPFieldView (1.0.1)
-  - Player (0.13.0)
-  - Presentr (1.9)
-
-DEPENDENCIES:
-  - Cards
-  - OTPFieldView
-  - Presentr
-
-SPEC REPOS:
-  trunk:
-    - Cards
-    - OTPFieldView
-    - Player
-    - Presentr
-
-SPEC CHECKSUMS:
-  Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
-  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
-  Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
-  Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
-
-PODFILE CHECKSUM: c0cba7adcd07e3f9f821a695a5f4d6c15aecd9bb
+PODFILE CHECKSUM: b35d2388ac3d553d22a0153d9238d00476bf6838
 
 COCOAPODS: 1.11.3

@@ -60,6 +60,7 @@ extension UIColor {
     static let brightAzure: UIColor = UIColor(hexString: "#3B86F7")!
     static let azureBlue: UIColor = UIColor(hexString: "#275DE1")!
     static let iceBlue: UIColor = UIColor(hexString: "#F2F5F7")!
+    static let lightCyanBlue: UIColor = UIColor(hexString: "#D6EFFC")!
     
     static let athensGray: UIColor = UIColor(hexString: "#E9EDF0")!
     static let platinumGray: UIColor = UIColor(hexString: "#E4E4E4")!
@@ -73,6 +74,7 @@ extension UIColor {
     static let grayNickel: UIColor = UIColor(hexString: "#989898")!
     
     static let nearWhite: UIColor = UIColor(hexString: "#FEFEFE")!
+    static let ghostWhite: UIColor = UIColor(hexString: "#E5E8F0")!
     
     static let charcoalBrown: UIColor = UIColor(hexString: "#635D5C")!
     

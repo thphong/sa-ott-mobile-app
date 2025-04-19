@@ -8,21 +8,22 @@
 import Foundation
 import MessageKit
 
-struct ChatMember: SenderType {
+struct ChatMember: SenderType, Codable {
     let senderId: String
     let displayName: String
-}
+    let avatarURL: String?
 
-extension ChatMember: Decodable {
     enum CodingKeys: String, CodingKey {
-        case userId = "userId"
-        case userNick = "userNick"
+        case senderId = "id"
+        case displayName = "full_name"
+        case avatarURL = "avatar_url"
     }
-    
-    init(from decoder: any Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        let userId = try values.decode(Int.self, forKey: .userId)
-        self.senderId = "\(userId)"
-        self.displayName = try values.decode(String.self, forKey: .userNick)
+
+    func toDictionary() -> [String: Any] {
+        return [
+            "id": Int(senderId) ?? 0,
+            "full_name": displayName,
+            "avatar_url": avatarURL ?? ""
+        ]
     }
 }

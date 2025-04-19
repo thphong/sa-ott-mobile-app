@@ -11,7 +11,7 @@ import SwipeCellKit
 final class MessageViewController: BaseViewController {
     
     private var tableView: UITableView!
-    private var chatVC = ChatViewController()
+    // private var chatVC = ChatViewController(chatPartner: chatPartner)
     
     override func loadView() {
         super.loadView()
@@ -73,7 +73,8 @@ extension MessageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        present(chatVC, animated: true)
+//        chatVC.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(chatVC, animated: true)
     }
 }
 

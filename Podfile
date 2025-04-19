@@ -6,7 +6,4 @@ target 'bkalo' do
   use_frameworks!
   
   # Pods for bkalo
-  pod 'Cards'
-  pod 'Presentr'
-  pod 'OTPFieldView'
 end

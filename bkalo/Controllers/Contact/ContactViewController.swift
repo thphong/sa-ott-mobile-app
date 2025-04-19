@@ -12,8 +12,8 @@ final class ContactViewController: BaseViewController {
     
     private var menuVC: PagingMenuViewController!
     private var contentVC: PagingContentViewController!
-    private var contentVCs = [ContactListViewController(), ContactListViewController()]
-    private var contactCategoryModels = ["Bạn bè", "Nhóm"]
+    private var contentVCs = [ContactListViewController(), GroupListViewController()]
+    private var contactCategoryModels = ["Friend", "Group"]
     
     override func loadView() {
         super.loadView()
@@ -52,7 +52,7 @@ final class ContactViewController: BaseViewController {
             contentVC.view.topAnchor.constraint(equalTo: menuVC.view.bottomAnchor),
             contentVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             contentVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentVC.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            contentVC.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
@@ -77,7 +77,11 @@ final class ContactViewController: BaseViewController {
         ]
     }
     
-    @objc private func addContactAction() {}
+    @objc private func addContactAction() {
+        let addContactVC = AddContactViewController()
+        let nav = UINavigationController(rootViewController: addContactVC)
+        present(nav, animated: true)
+    }
 }
 
 extension ContactViewController: PagingMenuViewControllerDelegate {

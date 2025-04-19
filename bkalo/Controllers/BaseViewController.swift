@@ -18,23 +18,26 @@ class BaseViewController: UIViewController {
         searchBar.backgroundColor = .clear
         searchBar.searchTextField.backgroundColor = .clear
         searchBar.searchTextField.leftView?.tintColor = .white
-        searchBar.searchTextField.attributedPlaceholder =  NSAttributedString.init(string: "Tìm kiếm", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        searchBar.searchTextField.attributedPlaceholder =  NSAttributedString.init(string: "Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchBar)
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(profileAction)),
-            UIBarButtonItem(image: UIImage(systemName: "qrcode.viewfinder"), style: .plain, target: self, action: #selector(notifyAction))
-        ]
         
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .cornFlowerBlue
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        let btnAdd = UIButton.barButton(image: UIImage(systemName: "plus"))
+        btnAdd.tintColor = .white
+        btnAdd.addTarget(self, action: #selector(profileAction), for: .touchUpInside)
+        
+        let btnQR = UIButton.barButton(image: UIImage(systemName: "qrcode.viewfinder"))
+        btnQR.tintColor = .white
+        btnQR.addTarget(self, action: #selector(notifyAction), for: .touchUpInside)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(customView: btnAdd),
+            UIBarButtonItem(customView: btnQR)
+        ]
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.barTintColor = .cornFlowerBlue
     }
     
     deinit {
@@ -49,6 +52,15 @@ class BaseViewController: UIViewController {
     @objc private func notifyAction() {
 
     }
+    
+    // Helper function to show the "Coming Soon" alert
+    public func showComingSoonAlert(for section: String) {
+        let alertController = UIAlertController(title: "\(section)", message: "This feature is coming soon.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        
+        present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension BaseViewController: UISearchBarDelegate {
@@ -58,6 +70,18 @@ extension BaseViewController: UISearchBarDelegate {
         }
         
         searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        
+        let alert = UIAlertController(
+            title: "Coming soon",
+            message: "Search feature is under development. Please check back soon!",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
 

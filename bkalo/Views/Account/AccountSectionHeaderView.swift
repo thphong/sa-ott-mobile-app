@@ -78,9 +78,18 @@ final class AccountSectionHeaderView: UITableViewHeaderFooterView {
         ])
     }
     
-    func setData() {
-        self.imgAvatar.image = UIImage(systemName: "trophy")
-        self.lblName.text = "Tam"
-        self.lblInfo.text = "Xem trang cá nhân"
+    func setData(_ info: UserModel?) {
+        if let info = info {
+            self.lblName.text = info.name
+            ChatSocketManager.shared.getPublicFile(key: info.avatar) { success, publicURL in
+                if success, let publicKey = publicURL {
+                    self.imgAvatar.kf.setImage(with: publicKey)
+                }
+            }
+        } else {
+            self.imgAvatar.image = UIImage(systemName: "trophy")
+            self.lblName.text = "Tam"
+        }
+        self.lblInfo.text = "View your profile"
     }
 }
